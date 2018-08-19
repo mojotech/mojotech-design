@@ -1,6 +1,8 @@
 import "intersection-observer";
 import scrollama from "scrollama";
 
+import { debounce } from "./_helpers";
+
 const scroller = scrollama();
 
 const scrollConfig = {
@@ -19,7 +21,9 @@ const handleExit = ({ element, direction }) => {
   console.log(`exiting: ${element} direction: ${direction}`);
 };
 
+const _handleEnter = debounce(handleEnter, 300);
+
 scroller
   .setup(scrollConfig)
-  .onStepEnter(handleEnter)
+  .onStepEnter(_handleEnter)
   .onStepExit(handleExit);
