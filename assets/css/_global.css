@@ -1,0 +1,13 @@
+:root {
+  --mojo-green: #00ba40;
+  --black-1: #171c1f;
+  --black-2: #1f2629;
+  --gray-1: #e9edef;
+  --altis: "AltisExtrabold", system-ui;
+  --gt-america: "GTAmerica-Light", system-ui;
+  --ease-in-out: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+  @custom-media --screen-s (max-width: 699px);
+  @custom-media --screen-m (min-width: 700px);
+  @custom-media --screen-l (min-width: 1000px);
+}

@@ -1,0 +1,46 @@
+@import "_global.css";
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+[data-theme="dark"] {
+  --bg: var(--black-1);
+  --fg: var(--gray-1);
+}
+
+[data-theme="light"] {
+  --bg: var(--gray-1);
+  --fg: var(--black-1);
+}
+
+body {
+  color: var(--fg);
+  background-color: var(--bg);
+  font-family: var(--gt-america);
+  font-size: 24px;
+  transition: all 300ms var(--ease-in-out);
+}
+
+section {
+  height: 1000px;
+  width: 100%;
+  border: 1px solid dodgerblue;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+}
+
+header ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
