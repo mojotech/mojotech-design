@@ -1,0 +1,24 @@
+.client-box {
+  background-color: var(--bg);
+  box-shadow: var(--box-shadow-1);
+  color: var(--fg);
+  text-align: center;
+  padding: var(--space-m);
+  @media (--screen-m) {
+    padding: var(--space-xl);
+  }
+  & p {
+    margin-bottom: var(--space-s);
+  }
+  & .logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    grid-gap: var(--space-m);
+    @media (--screen-m) {
+      grid-gap: var(--space-s);
+      grid-template-rows: repeat(2, var(--space-xl));
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

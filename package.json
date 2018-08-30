@@ -9,6 +9,8 @@
   "bugs": "https://github.com/jssee/mojotech-design/issues",
   "dependencies": {
     "intersection-observer": "^0.5.0",
+    "minireset.css": "^0.0.3",
+    "popmotion": "^8.3.6",
     "reshape-standard": "^3.3.0",
     "scrollama": "^1.4.3",
     "spike": "^2.3.0",

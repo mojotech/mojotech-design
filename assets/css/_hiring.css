@@ -1,0 +1,13 @@
+.blocks {
+  display: flex;
+  flex-direction: column;
+  @media (--screen-m) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  & .block:not(:last-child) {
+    @media (--screen-m) {
+      margin-right: var(--space-xl);
+    }
+  }
+}

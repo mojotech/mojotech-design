@@ -1,0 +1,17 @@
+.carousel {
+  display: flex;
+  padding-left: var(--space-l);
+  height: 240px;
+  @media (--screen-m) {
+    padding-left: var(--space-xxl);
+    height: 400px;
+  }
+  & .item {
+    background-color: var(--mojo-green);
+    margin-right: var(--space-m);
+    flex: 0 0 200px;
+    @media (--screen-m) {
+      flex: 0 0 320px;
+    }
+  }
+}

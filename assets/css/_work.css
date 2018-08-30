@@ -1,0 +1,21 @@
+#work {
+  & h2 {
+    max-width: 15ch;
+    margin-bottom: 2em;
+    @media (--screen-m) {
+      margin-bottom: 3em;
+    }
+  }
+  & .shots {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .shot {
+      max-width: 700px;
+      margin-bottom: var(--space-l);
+      @media (--screen-m) {
+        margin-bottom: var(--space-xxl);
+      }
+    }
+  }
+}

@@ -37,6 +37,10 @@
     ansi-styles "^2.2.1"
     esutils "^2.0.2"
 
+"@popmotion/easing@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@popmotion/easing/-/easing-1.0.1.tgz#48336aea29542113df10aeb81b4fd10f0b95f937"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -2754,6 +2758,10 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
+framesync@^3.1.8, framesync@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/framesync/-/framesync-3.1.9.tgz#f65f815c711cf876f343b1f63da6e18b1384172f"
+
 fresh@0.5.2, fresh@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
@@ -3036,6 +3044,10 @@ hawk@~6.0.2:
     cryptiles "3.x.x"
     hoek "4.x.x"
     sntp "2.x.x"
+
+hey-listen@^1.0.4, hey-listen@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/hey-listen/-/hey-listen-1.0.5.tgz#6d0a3a2f60177f65bc4404d571a00025bf5dc20e"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -4253,6 +4265,10 @@ minipass@^2.2.1, minipass@^2.3.3:
     safe-buffer "^5.1.2"
     yallist "^3.0.0"
 
+minireset.css@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/minireset.css/-/minireset.css-0.0.3.tgz#0b112dbbd7809ea0fc965388b79fd29390778fe5"
+
 minizlib@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/minizlib/-/minizlib-1.1.0.tgz#11e13658ce46bc3a70a267aac58359d1e0c29ceb"
@@ -4879,6 +4895,17 @@ plur@^2.0.0:
 pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
+
+popmotion@^8.3.6:
+  version "8.3.6"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.6.tgz#33b214ca8e2b27029183d69fb6538368bba40e77"
+  dependencies:
+    "@popmotion/easing" "^1.0.1"
+    framesync "^3.1.9"
+    hey-listen "^1.0.5"
+    style-value-types "^3.0.4"
+    stylefire "^2.0.6"
+    tslib "^1.9.1"
 
 portscanner@2.1.1:
   version "2.1.1"
@@ -6753,6 +6780,19 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
+style-value-types@^3.0.3, style-value-types@^3.0.4:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.6.tgz#144f634ba0c8f053ee615c7308adc97fe83917dd"
+
+stylefire@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.6.tgz#aa35093b782e1d2ea746d9aac483f38366954e19"
+  dependencies:
+    framesync "^3.1.8"
+    hey-listen "^1.0.4"
+    style-value-types "^3.0.3"
+    tslib "^1.9.1"
+
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
@@ -6942,6 +6982,10 @@ trim-right@^1.0.1:
 trough@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/trough/-/trough-1.0.3.tgz#e29bd1614c6458d44869fc28b255ab7857ef7c24"
+
+tslib@^1.9.1:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 
 tty-browserify@0.0.0:
   version "0.0.0"
