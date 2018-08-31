@@ -10,6 +10,7 @@
     background-color: var(--mojo-green);
     margin-right: var(--space-m);
     flex: 0 0 200px;
+    cursor: grab;
     @media (--screen-m) {
       flex: 0 0 320px;
     }
