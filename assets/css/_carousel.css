@@ -15,3 +15,24 @@
     }
   }
 }
+
+.progress {
+  background-color: var(--black-2);
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--space-l);
+  width: calc(100% - 20vw);
+  max-width: var(--content-width);
+  @media (--screen-m) {
+    margin-top: var(--space-xl);
+  }
+  & .progress-bar {
+    --scale: 0;
+    background-color: #fff;
+    height: 100%;
+    transform-origin: 0 0;
+    transform: scaleX(var(--scale));
+    width: 100%;
+  }
+}

@@ -1,5 +1,6 @@
-import { carouselController } from './_carousel.js'
-import { scrollController } from './_scroller.js'
+import { carouselController, carouselProgress } from "./_carousel.js";
+import { scrollController } from "./_scroller.js";
 
-scrollController()
-carouselController()
+scrollController();
+carouselController();
+carouselProgress();
