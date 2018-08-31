@@ -63,7 +63,7 @@ h3,
   --fz-max: 24;
   font-size: calc(
     (var(--fz-min) * 1px) + (var(--fz-max) - var(--fz-min)) *
-    ((100vw - 600px) / (1800 - 600))
+      ((100vw - 600px) / (1800 - 600))
   );
   font-family: var(--gt-america);
   line-height: 1.5;
@@ -79,7 +79,9 @@ h3,
 
 .smallcaps {
   color: var(--mojo-green);
+  font-family: var(--altis-medium);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 14px;
+  margin-bottom: 2em;
 }
