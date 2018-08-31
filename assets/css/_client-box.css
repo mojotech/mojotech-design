@@ -7,8 +7,9 @@
   @media (--screen-m) {
     padding: var(--space-xl);
   }
-  & p {
-    margin-bottom: var(--space-s);
+  & .smallcaps {
+    margin-bottom: var(--space-l);
+    color: var(--gray-1);
   }
   & .logos {
     display: grid;
