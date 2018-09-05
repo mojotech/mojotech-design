@@ -1,4 +1,5 @@
 #work {
+  padding-top: var(--space-xl);
   & h2 {
     max-width: 15ch;
     margin-bottom: 2em;
