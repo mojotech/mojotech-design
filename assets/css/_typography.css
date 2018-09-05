@@ -58,6 +58,15 @@ h3,
   margin-bottom: calc(2 / 3 * 1em);
 }
 
+small {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+}
+
+figcaption {
+  line-height: 1;
+}
+
 .sub-text {
   --fz-min: 16;
   --fz-max: 24;
