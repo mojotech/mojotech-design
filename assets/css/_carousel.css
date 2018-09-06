@@ -2,17 +2,17 @@
   display: flex;
   padding-left: var(--space-l);
   height: 240px;
+  align-items: center;
   @media (--screen-m) {
     padding-left: var(--space-xxl);
     height: 400px;
   }
   & .item {
-    background-color: var(--mojo-green);
     margin-right: var(--space-m);
     flex: 0 0 200px;
     cursor: grab;
     @media (--screen-m) {
-      flex: 0 0 320px;
+      flex: 0 0 420px;
     }
   }
 }

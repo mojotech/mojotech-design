@@ -14,11 +14,14 @@ const sliderX = value(0, divStyler.set("x"));
 const { clamp, pipe } = transform;
 
 export function carouselController() {
-  const clampRange = () => clamp(-1000, 0);
+  const clampRange = () => clamp(-2400, 0);
 
   listen(slider, "mousedown touchstart").start(() => {
     pointer({ x: sliderX.get() })
-      .pipe(({ x }) => x, clampRange())
+      .pipe(
+        ({ x }) => x,
+        clampRange()
+      )
       .start(sliderX);
   });
 
@@ -34,7 +37,7 @@ export function carouselController() {
 
 export function carouselProgress() {
   const bar = document.querySelector(".progress-bar");
-  const position = calc.getProgressFromValue(0, -1000, sliderX.get());
+  const position = calc.getProgressFromValue(0, -2400, sliderX.get());
   bar.style.setProperty("--scale", position);
 
   requestAnimationFrame(carouselProgress);

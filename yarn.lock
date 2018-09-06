@@ -1002,6 +1002,14 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
+basicscroll@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/basicscroll/-/basicscroll-2.1.1.tgz#d5bd4ae42fe368141a16fbeed73564260fe82cd5"
+  dependencies:
+    eases "^1.0.8"
+    lodash.clonedeep "^4.5.0"
+    parse-unit "^1.0.1"
+
 batch@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
@@ -2092,6 +2100,10 @@ dot-prop@^4.1.0:
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
+
+eases@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/eases/-/eases-1.0.8.tgz#f1f5069a6b6ed2ea510f9c6110398d63efe9aee6"
 
 easy-extender@2.3.2:
   version "2.3.2"
@@ -4722,6 +4734,10 @@ parse-ms@^0.1.0:
 parse-ms@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parse-ms/-/parse-ms-1.0.1.tgz#56346d4749d78f23430ca0c713850aef91aa361d"
+
+parse-unit@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/parse-unit/-/parse-unit-1.0.1.tgz#7e1bb6d5bef3874c28e392526a2541170291eecf"
 
 parse5@^2.1.5:
   version "2.2.3"

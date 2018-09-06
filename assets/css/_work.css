@@ -1,5 +1,5 @@
 #work {
-  padding-top: var(--space-xl);
+  padding-top: 300px;
   & h2 {
     max-width: 15ch;
     margin-bottom: 2em;
@@ -13,9 +13,9 @@
     align-items: center;
     & .shot {
       max-width: 700px;
-      margin-bottom: var(--space-l);
+      margin-bottom: var(--space-xl);
       @media (--screen-m) {
-        margin-bottom: var(--space-xxl);
+        margin-bottom: 400px;
       }
     }
   }

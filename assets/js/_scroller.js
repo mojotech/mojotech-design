@@ -2,7 +2,7 @@ import "intersection-observer";
 import scrollama from "scrollama";
 import { tween, styler, stagger, transform, easing } from "popmotion";
 import { debounce } from "./_helpers";
-
+const basicScroll = require("basicScroll");
 const { smooth, transformMap } = transform;
 
 export function scrollController() {
@@ -58,7 +58,6 @@ export function fadeController() {
 
     fadeInAnimation.start(elStyler.set);
   }
-
   fadeInScroller
     .setup({
       step: ".fade-in",
@@ -66,4 +65,45 @@ export function fadeController() {
       once: true
     })
     .onStepEnter(handleFadeIn);
+}
+
+export function shapeScroll() {
+  const circleShape = basicScroll.create({
+    elem: document.querySelector(".circle"),
+    from: "top-bottom",
+    to: "middle-middle",
+    props: {
+      "--tY": {
+        from: "10%",
+        to: "160%"
+      },
+      "--tX": {
+        from: "30%",
+        to: "110%"
+      },
+      "--scale": {
+        from: "1",
+        to: "2.3"
+      }
+    }
+  });
+
+  const triangleShape = basicScroll.create({
+    elem: document.querySelector(".triangle"),
+    from: "top-middle",
+    to: "top-top",
+    props: {
+      "--rotate": {
+        from: "0",
+        to: "2turn"
+      },
+      "--circle-tY": {
+        from: "100%",
+        to: "-110%"
+      }
+    }
+  });
+
+  triangleShape.start();
+  circleShape.start();
 }
