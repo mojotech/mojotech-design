@@ -125,3 +125,25 @@ a {
   opacity: 0;
   transform: translateY(20px);
 }
+
+#intro {
+  & .content {
+    z-index: 2;
+  }
+  & .shapes {
+    position: absolute;
+    height: 140vh;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    & .circle {
+      height: 300px;
+      width: 300px;
+      border-radius: 100%;
+      background-color: #fff;
+      transform: translate(var(--tX), var(--tY)) scale(var(--scale));
+    }
+  }
+}
