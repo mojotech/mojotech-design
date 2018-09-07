@@ -14,7 +14,7 @@ export function scrollController() {
     .setup({
       step: "[data-themeset]",
       threshhold: 2,
-      offset: 0.8
+      offset: 0.8,
     })
     .onStepEnter(mixBackground);
 }
@@ -31,14 +31,14 @@ export function fadeController() {
     .setup({
       step: ".fade-in",
       offset: 0.9,
-      once: true
+      once: true,
     })
     .onStepEnter(handleFadeIn);
 
   fadeInUpScroller
     .setup({
       step: ".fade-in",
-      offset: 0.1
+      offset: 0.1,
     })
-  .onStepEnter(handleFadeIn);
+    .onStepEnter(handleFadeIn);
 }
