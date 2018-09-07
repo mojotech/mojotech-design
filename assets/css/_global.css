@@ -149,11 +149,6 @@ a:not(.button) {
   }
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
 #intro {
   & .content {
     z-index: 2;
