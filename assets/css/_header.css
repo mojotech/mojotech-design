@@ -1,15 +1,5 @@
-:root {
-  --header-bg: rgba(233, 237, 239, 0.6);
-}
-
-[data-theme="dark"] {
-  --header-bg: rgba(27, 30, 31, 0.8);
-}
-
 header {
-  backdrop-filter: saturate(180%) blur(20px);
   display: flex;
-  background-color: var(--header-bg);
   align-items: center;
   width: 100%;
   max-width: var(--content-width);
