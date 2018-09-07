@@ -163,11 +163,21 @@ a:not(.button) {
     z-index: 1;
 
     & .circle {
-      height: 300px;
-      width: 300px;
+      animation: float 12s infinite linear;
+      height: 40vmax;
+      width: 40vmax;
       border-radius: 100%;
       background-color: #fff;
-      transform: translate(var(--tX), var(--tY)) scale(var(--scale));
     }
+  }
+}
+
+@keyframes float {
+  from {
+    transform: rotate(-0.001deg) translate3d(16px, 0, 0) rotate(-0.001deg);
+  }
+
+  to {
+    transform: rotate(360.001deg) translate3d(16px, 0, 0) rotate(-360.001deg);
   }
 }
