@@ -40,6 +40,7 @@ export function scrollController() {
 
 export function fadeController() {
   const fadeInScroller = scrollama();
+  const fadeInUpScroller = scrollama();
 
   function handleFadeIn({ element }) {
     element.classList.add("in-view");
@@ -52,4 +53,11 @@ export function fadeController() {
       once: true
     })
     .onStepEnter(handleFadeIn);
+
+  fadeInUpScroller
+    .setup({
+      step: ".fade-in",
+      offset: 0.1
+    })
+  .onStepEnter(handleFadeIn);
 }
