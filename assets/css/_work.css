@@ -17,6 +17,7 @@
     & .shot {
       max-width: 760px;
       margin-bottom: var(--space-xl);
+      transition-duration: 500ms;
       @media (--screen-m) {
         margin-bottom: 400px;
       }
