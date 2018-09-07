@@ -22,6 +22,7 @@
   --page-width: 100rem;
 
   --box-shadow-1: 0 10px 80px 0 #060606;
+  --box-shadow-2: 0 5px 40px 0 rgba(6, 6, 6, 0.05);
 
   --z-1: 100;
   --z-2: 200;
@@ -59,6 +60,7 @@ body {
   color: var(--fg);
   background-color: var(--bg);
   transition: all 300ms var(--ease-in-out);
+  -webkit-font-smoothing: antialiased;
 }
 
 html,
@@ -106,9 +108,14 @@ a:not(.button) {
   letter-spacing: 0.5px;
   font-size: 12px;
   padding: 10px 32px;
+  transition: all 300ms var(--ease-in-out);
   @media (--screen-m) {
     font-size: 14px;
     padding: var(--space-xs) var(--space-m);
+  }
+  &:hover {
+    box-shadow: var(--box-shadow-2);
+    transform: translateY(-3px);
   }
 }
 
@@ -162,11 +169,21 @@ a:not(.button) {
     z-index: 1;
 
     & .circle {
-      height: 300px;
-      width: 300px;
+      animation: float 12s infinite linear;
+      height: 40vmax;
+      width: 40vmax;
       border-radius: 100%;
       background-color: #fff;
-      transform: translate(var(--tX), var(--tY)) scale(var(--scale));
     }
+  }
+}
+
+@keyframes float {
+  from {
+    transform: rotate(-0.001deg) translate3d(16px, 0, 0) rotate(-0.001deg);
+  }
+
+  to {
+    transform: rotate(360.001deg) translate3d(16px, 0, 0) rotate(-360.001deg);
   }
 }
