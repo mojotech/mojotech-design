@@ -2,17 +2,26 @@
   display: flex;
   padding-left: var(--space-l);
   height: 240px;
-  align-items: center;
+  width: 100%;
   @media (--screen-m) {
     padding-left: var(--space-xxl);
     height: 400px;
   }
+  & .items {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
   & .item {
-    margin-right: var(--space-m);
+    margin-right: var(--space-l);
     flex: 0 0 200px;
     cursor: grab;
     @media (--screen-m) {
+      margin-right: var(--space-xl);
       flex: 0 0 420px;
+    }
+    & img {
+      pointer-events: none;
     }
   }
 }
@@ -26,7 +35,7 @@
   width: calc(100% - 20vw);
   max-width: var(--content-width);
   @media (--screen-m) {
-    margin-top: var(--space-xl);
+    margin-top: 200px;
   }
   & .progress-bar {
     --scale: 0;

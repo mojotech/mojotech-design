@@ -5,28 +5,9 @@ const { smooth, transformMap } = transform;
 
 export function scrollController() {
   const scroller = scrollama();
-  const bodyStyler = styler(document.querySelector("body"));
-  let theme = "light";
+
   function mixBackground({ element }) {
-    if (element.dataset.themeset == "light" && theme == "dark") {
-      tween({
-        from: { background: "#171c1f", color: "#e9edef" },
-        to: { background: "#e9edef", color: "#171c1f" },
-        duration: 200,
-        ease: easing.linear
-      }).start(bodyStyler.set);
-      theme = "light";
-    } else if (element.dataset.themeset == "dark" && theme == "light") {
-      tween({
-        from: { background: "#e9edef", color: "#171c1f" },
-        to: { background: "#171c1f", color: "#e9edef" },
-        duration: 200,
-        ease: easing.linear
-      }).start(bodyStyler.set);
-      theme = "dark";
-    } else {
-      console.log("");
-    }
+    document.querySelector("body").dataset.theme = element.dataset.themeset;
   }
 
   scroller

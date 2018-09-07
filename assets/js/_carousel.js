@@ -1,3 +1,4 @@
+import { queryArray } from "./_helpers.js";
 import {
   styler,
   decay,
@@ -8,13 +9,18 @@ import {
   calc
 } from "popmotion";
 
-const slider = document.querySelector(".carousel");
+const slider = document.querySelector(".items");
 const divStyler = styler(slider);
 const sliderX = value(0, divStyler.set("x"));
 const { clamp, pipe } = transform;
 
+let upperRange = -3696;
+if (window.innerWidth <= 700) {
+  upperRange = -1800;
+}
+
 export function carouselController() {
-  const clampRange = () => clamp(-2400, 0);
+  const clampRange = () => clamp(upperRange, 0);
 
   listen(slider, "mousedown touchstart").start(() => {
     pointer({ x: sliderX.get() })
@@ -37,7 +43,7 @@ export function carouselController() {
 
 export function carouselProgress() {
   const bar = document.querySelector(".progress-bar");
-  const position = calc.getProgressFromValue(0, -2400, sliderX.get());
+  const position = calc.getProgressFromValue(0, upperRange, sliderX.get());
   bar.style.setProperty("--scale", position);
 
   requestAnimationFrame(carouselProgress);
