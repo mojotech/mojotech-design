@@ -9,13 +9,13 @@
     transition-delay: 250ms;
   }
   &.an-gamma {
-    transition-delay: 300ms;
+    transition-delay: 500ms;
   }
   &.an-delta {
-    transition-delay: 350ms;
+    transition-delay: 750ms;
   }
   &.an-epsilon {
-    transition-delay: 400ms;
+    transition-delay: 850ms;
   }
 }
 
