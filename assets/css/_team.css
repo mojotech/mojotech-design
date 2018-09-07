@@ -1,4 +1,10 @@
 #team {
+  & h3 {
+    margin-bottom: var(--space-l);
+    @media (--screen-m) {
+      margin-bottom: var(--space-xl);
+    }
+  }
   & .lead {
     margin-bottom: var(--space-xl);
   }
