@@ -8,7 +8,7 @@
   & .blocks {
     margin-bottom: var(--space-l);
     @media (--screen-m) {
-      margin-bottom: var(--space-xxl);
+      margin-bottom: var(--space-l);
     }
   }
 }
