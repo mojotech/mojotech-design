@@ -105,3 +105,21 @@ figcaption {
   font-size: 14px;
   margin-bottom: 2em;
 }
+
+.content-list {
+  padding-left: var(--space-xs);
+}
+
+.content-list li {
+  &:not(:last-child) {
+    margin-bottom: var(--space-xs);
+  }
+}
+
+.content-list li::before {
+  color: var(--mojo-green);
+  content: "\2022";
+  display: inline-block;
+  margin-left: calc(-1*var(--space-xs));
+  width: var(--space-xs);
+}
