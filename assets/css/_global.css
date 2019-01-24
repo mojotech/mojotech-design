@@ -189,10 +189,9 @@ a:not(.button, .resource-block) {
 }
 
 .triangle {
-  /* background-image: url('../img/triangle-huge.png'); */
-  /* background-size: cover; */
   position: absolute;
   height: auto;
+  opacity: 0.25;
   width: 100vw;
   z-index: 1;
 }

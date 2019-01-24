@@ -17,6 +17,9 @@
   &.an-epsilon {
     transition-delay: 850ms;
   }
+  &.an-zeta {
+    transition-delay: 950ms;
+  }
 }
 
 .fade-in-x {
