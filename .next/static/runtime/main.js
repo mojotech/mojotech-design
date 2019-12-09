@@ -5039,7 +5039,7 @@ var _formatWebpackMessages = _interopRequireDefault(__webpack_require__(/*! ./fo
 
 var ErrorOverlay = _interopRequireWildcard(__webpack_require__(/*! react-error-overlay */ "./node_modules/react-error-overlay/lib/index.js"));
 
-var _stripAnsi = _interopRequireDefault(__webpack_require__(/*! strip-ansi */ "./node_modules/next/node_modules/strip-ansi/index.js"));
+var _stripAnsi = _interopRequireDefault(__webpack_require__(/*! strip-ansi */ "./node_modules/strip-ansi/index.js"));
 
 var _sourceMapSupport = __webpack_require__(/*! ./source-map-support */ "./node_modules/next/dist/client/dev/error-overlay/source-map-support.js");
 
@@ -5139,7 +5139,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/andybirch/Sites/mojotech-design/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/j/Code/mojotech-design/.next");
       return error;
     }
   };
@@ -9604,49 +9604,6 @@ exports.SUPPORTS_PERFORMANCE_USER_TIMING = exports.SUPPORTS_PERFORMANCE && typeo
 
 /***/ }),
 
-/***/ "./node_modules/next/node_modules/ansi-regex/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/next/node_modules/ansi-regex/index.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Object$assign = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/next/dist/build/polyfills/object-assign.js");
-
-module.exports = function (options) {
-  options = _Object$assign({
-    onlyFirst: false
-  }, options);
-  var pattern = ["[\\u001B\\u009B][[\\]()#;?]*(?:(?:(?:[a-zA-Z\\d]*(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]*)*)?\\u0007)", '(?:(?:\\d{1,4}(?:;\\d{0,4})*)?[\\dA-PR-TZcf-ntqry=><~]))'].join('|');
-  return new RegExp(pattern, options.onlyFirst ? undefined : 'g');
-};
-
-/***/ }),
-
-/***/ "./node_modules/next/node_modules/strip-ansi/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/next/node_modules/strip-ansi/index.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var ansiRegex = __webpack_require__(/*! ansi-regex */ "./node_modules/next/node_modules/ansi-regex/index.js");
-
-var stripAnsi = function stripAnsi(string) {
-  return typeof string === 'string' ? string.replace(ansiRegex(), '') : string;
-};
-
-module.exports = stripAnsi;
-module.exports["default"] = stripAnsi;
-
-/***/ }),
-
 /***/ "./node_modules/node-libs-browser/node_modules/punycode/punycode.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/node-libs-browser/node_modules/punycode/punycode.js ***!
@@ -11606,6 +11563,49 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/strip-ansi/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/strip-ansi/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var ansiRegex = __webpack_require__(/*! ansi-regex */ "./node_modules/strip-ansi/node_modules/ansi-regex/index.js");
+
+var stripAnsi = function stripAnsi(string) {
+  return typeof string === 'string' ? string.replace(ansiRegex(), '') : string;
+};
+
+module.exports = stripAnsi;
+module.exports["default"] = stripAnsi;
+
+/***/ }),
+
+/***/ "./node_modules/strip-ansi/node_modules/ansi-regex/index.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/strip-ansi/node_modules/ansi-regex/index.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Object$assign = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/next/dist/build/polyfills/object-assign.js");
+
+module.exports = function (options) {
+  options = _Object$assign({
+    onlyFirst: false
+  }, options);
+  var pattern = ["[\\u001B\\u009B][[\\]()#;?]*(?:(?:(?:[a-zA-Z\\d]*(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]*)*)?\\u0007)", '(?:(?:\\d{1,4}(?:;\\d{0,4})*)?[\\dA-PR-TZcf-ntqry=><~]))'].join('|');
+  return new RegExp(pattern, options.onlyFirst ? undefined : 'g');
+};
 
 /***/ }),
 
