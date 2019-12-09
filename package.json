@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "start": "next",
     "build": "next build",
-    "start": "next start"
+    "next:start": "next start"
   },
   "dependencies": {
     "@mojotech/mojo-ui": "^1.7.2",
