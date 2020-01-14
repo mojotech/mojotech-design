@@ -3,6 +3,7 @@ import { Text, Wrap } from "@mojotech/mojo-ui";
 
 import Layout from "../components/Layout";
 import RatioBox from "../components/RatioBox";
+import WorkGrid from "../components/WorkGrid";
 
 const Index: React.FunctionComponent = () => (
   <Layout>
@@ -23,6 +24,7 @@ const Index: React.FunctionComponent = () => (
         be right.
       </Text>
     </Wrap>
+    <WorkGrid />
   </Layout>
 );
 
