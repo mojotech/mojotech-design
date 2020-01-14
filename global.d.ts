@@ -30,3 +30,8 @@ declare type Theme = {
   opacities: number[];
   zIndices: number[];
 };
+
+declare module "*.svg" {
+  const content: any;
+  export default content;
+}
