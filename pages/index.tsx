@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import RatioBox from "../components/RatioBox";
 import WorkGrid from "../components/WorkGrid";
 import CTA from "../components/CTA";
+import StaffGrid from "../components/StaffGrid";
 
 const Index: React.FunctionComponent = () => (
   <Layout>
@@ -26,6 +27,7 @@ const Index: React.FunctionComponent = () => (
       </Text>
     </Wrap>
     <WorkGrid />
+    <StaffGrid />
     <CTA type="lifestyle" />
   </Layout>
 );
