@@ -4,6 +4,7 @@ import { Text, Wrap } from "@mojotech/mojo-ui";
 import Layout from "../components/Layout";
 import RatioBox from "../components/RatioBox";
 import WorkGrid from "../components/WorkGrid";
+import StaffGrid from "../components/StaffGrid";
 
 const Index: React.FunctionComponent = () => (
   <Layout>
@@ -25,6 +26,7 @@ const Index: React.FunctionComponent = () => (
       </Text>
     </Wrap>
     <WorkGrid />
+    <StaffGrid />
   </Layout>
 );
 
