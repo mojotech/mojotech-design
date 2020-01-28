@@ -58,7 +58,7 @@ const UA: React.FC = () => {
         </Text>
         <motion.div initial="closed" variants={workTextVariants}>
           <Text color="dark" fontSize={3}>
-            TAG LIST
+            UI, UX, Front-End Development
           </Text>
         </motion.div>
       </Box>

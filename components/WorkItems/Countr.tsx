@@ -30,7 +30,7 @@ const Countr: React.FC = () => {
       <Box left={[4, 5, 6]} top={[4, 5, 6]} zIndex={1} position="absolute">
         <Text fontSize={1}>Countr</Text>
         <motion.div initial="closed" variants={workTextVariants}>
-          <Text fontSize={3}>TAG LIST</Text>
+          <Text fontSize={3}>UI, UX, Front-End Development</Text>
         </motion.div>
       </Box>
       <svg
