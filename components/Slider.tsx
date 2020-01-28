@@ -35,7 +35,7 @@ const Slider: React.FC = props => {
           }}
         >
           <Flex
-            alignItems="flex-start"
+            alignItems="center"
             flexDirection="row"
             flexWrap="nowrap"
             position="absolute"
