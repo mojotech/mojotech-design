@@ -18,7 +18,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
       <Global
         styles={{
           html: {
-            backgroundColor: colors.gray,
+            backgroundColor: colors.dark,
           },
           "::selection": {
             backgroundColor: colors.mojogreen,
