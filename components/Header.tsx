@@ -38,6 +38,9 @@ const Header: React.FC = () => {
       maxw={[0, 3]}
       w="100%"
       zIndex={1}
+      css={{
+        pointerEvents: scrollPos === "bottom" ? "none" : "auto",
+      }}
     >
       <motion.div
         animate={scrollPos === "bottom" ? "bottom" : "top"}
