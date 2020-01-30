@@ -1,11 +1,12 @@
 import Head from "next/head";
 import * as React from "react";
 import { AppProps } from "next/app";
+import { motion, AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "emotion-theming";
 import { Global } from "@emotion/core";
 import { ThemeDecorator, BaseTheme } from "@mojotech/mojo-ui";
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps, router }: AppProps) => {
   const { colors } = BaseTheme;
 
   return (
@@ -27,7 +28,19 @@ const App = ({ Component, pageProps }: AppProps) => {
         }}
       />
       <ThemeDecorator>
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter initial={false}>
+          <motion.div
+            key={router.route}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 0.3,
+            }}
+          >
+            <Component {...pageProps} />
+          </motion.div>
+        </AnimatePresence>
       </ThemeDecorator>
     </ThemeProvider>
   );
