@@ -31,7 +31,7 @@ const Sunrays: React.FC = () => {
           Sunrays
         </Text>
         <motion.div initial="closed" variants={workTextVariants}>
-          <Text fontSize={3}>TAG LIST</Text>
+          <Text fontSize={3}>Visual Design, Branding</Text>
         </motion.div>
       </Box>
       <svg
