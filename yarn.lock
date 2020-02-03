@@ -1777,10 +1777,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@mojotech/mojo-ui@^1.8.6":
-  version "1.8.6"
-  resolved "https://registry.yarnpkg.com/@mojotech/mojo-ui/-/mojo-ui-1.8.6.tgz#36497781cebbf765922cd9253f75dc29fb60b5ea"
-  integrity sha512-8f9B6DyJbMDJ6iZbsKYSaDz3jEGXH8+AqQWR46Zo7n0U1Lx0g3THhdzUAaehXWRTyGNR2q0UizDN4bbPFnLUoQ==
+"@mojotech/mojo-ui@^1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@mojotech/mojo-ui/-/mojo-ui-1.9.1.tgz#7383757f89fb2df8f3fd59ceea792ffadd77de0c"
+  integrity sha512-o/o2+YUAQoFPYWf7/F1tv7EOSiotL8WyN7ceIMcwCYbhBQKlebPZNLcWs4a3EUgOd0rmYxiB1U5RVlYQolixSQ==
   dependencies:
     facepaint "^1.2.1"
     prettier "^1.18.2"
