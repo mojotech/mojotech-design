@@ -3,7 +3,7 @@ import * as React from "react";
 import Link from "next/link";
 import { motion, useViewportScroll } from "framer-motion";
 import { jsx } from "@emotion/core";
-import { Box, Wrap, AutoGrid, Text } from "@mojotech/mojo-ui";
+import { Box, Wrap, AutoGrid, Text, TextLink } from "@mojotech/mojo-ui";
 
 import Logo from "../components/Logo";
 import { mq } from "../lib/utils";
@@ -59,19 +59,29 @@ const Footer: React.FunctionComponent = () => {
         >
           <Box as="ul">
             <li>
-              <Link scroll={false} href="/who-we-are/" passHref>
+              <Link scroll={false} href="/intern/" passHref>
                 <Text as="a">Internships</Text>
               </Link>
             </li>
             <li>
-              <Link scroll={false} href="/how-we-work/" passHref>
-                <Text as="a">Learn About MojoTech</Text>
-              </Link>
+              <TextLink
+                href="https://mojotech.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+                opacity={1}
+              >
+                Learn About MojoTech
+              </TextLink>
             </li>
             <li>
-              <Link scroll={false} href="/services/" passHref>
-                <Text as="a">Check out or Dribbble</Text>
-              </Link>
+              <TextLink
+                href="https://dribbble.com/mojotech/"
+                rel="noopener noreferrer"
+                target="_blank"
+                opacity={1}
+              >
+                Check out our Dribbble
+              </TextLink>
             </li>
           </Box>
         </AutoGrid>
