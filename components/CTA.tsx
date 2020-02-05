@@ -12,8 +12,15 @@ import {
   Image,
 } from "@mojotech/mojo-ui";
 
+type Job = "intern" | "designer";
+
+interface BadgeProps {
+  jobType?: Job;
+}
+
 interface Props {
   type: "badge" | "lifestyle";
+  jobType?: Job;
 }
 
 const Lifestyle: React.FC = () => (
@@ -49,7 +56,7 @@ const Lifestyle: React.FC = () => (
   </Wrap>
 );
 
-const BadgeCTA: React.FC = () => (
+const BadgeCTA: React.FC<BadgeProps> = ({ jobType = "designer" }) => (
   <Wrap mb={5}>
     <Flex
       alignItems="center"
@@ -62,7 +69,11 @@ const BadgeCTA: React.FC = () => (
           Join our team in Providence, RI
         </Text>
         <a
-          href="https://mojotech.bamboohr.com/jobs/view.php?id=3"
+          href={
+            jobType === "designer"
+              ? "https://mojotech.bamboohr.com/jobs/view.php?id=3"
+              : "https://docs.google.com/forms/d/e/1FAIpQLSej1eyOsKhVtPN4XHkMPYVmnmPKvkwk20cnlrGSS6KOGi1xwQ/viewform"
+          }
           rel="noopener noreferrer"
           target="_blank"
           css={{ textDecoration: "none" }}
@@ -81,7 +92,13 @@ const BadgeCTA: React.FC = () => (
 );
 
 const CTA: React.FC<Props> = props => (
-  <Box>{props.type === "badge" ? <BadgeCTA /> : <Lifestyle />}</Box>
+  <Box>
+    {props.type === "badge" ? (
+      <BadgeCTA jobType={props.jobType} />
+    ) : (
+      <Lifestyle />
+    )}
+  </Box>
 );
 
 export default CTA;
