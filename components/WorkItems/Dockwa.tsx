@@ -29,11 +29,13 @@ const Dockwa: React.FC = () => {
       }}
     >
       <Box left={[4, 5, 6]} top={[4, 5, 6]} zIndex={1} position="absolute">
-        <Text mb={3} fontSize={1}>
+        <Text mb={2} fontSize={3}>
           Dockwa
         </Text>
         <motion.div initial="closed" variants={workTextVariants}>
-          <Text fontSize={3}>UI, UX, Concept</Text>
+          <Text fontSize={1} opacity={0}>
+            UI, UX, Concept
+          </Text>
         </motion.div>
       </Box>
       <svg

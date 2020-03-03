@@ -53,11 +53,11 @@ const UA: React.FC = () => {
       })}
     >
       <Box left={[4, 5, 6]} top={[4, 5, 6]} zIndex={1} position="absolute">
-        <Text fontSize={1} color="dark" mb={3}>
+        <Text fontSize={3} color="dark" mb={2}>
           Under Armour
         </Text>
         <motion.div initial="closed" variants={workTextVariants}>
-          <Text color="dark" fontSize={3}>
+          <Text color="dark" opacity={0} fontSize={1}>
             UI, UX, Front-End Development
           </Text>
         </motion.div>
