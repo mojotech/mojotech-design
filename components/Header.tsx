@@ -52,7 +52,7 @@ const Header: React.FC = () => {
         animate={scrollPos === "bottom" ? "bottom" : "top"}
         variants={headerVariants}
       >
-        <Link href="/">
+        <Link href="/hiring/">
           <Button paddingX={4}>Apply</Button>
         </Link>
       </motion.div>
