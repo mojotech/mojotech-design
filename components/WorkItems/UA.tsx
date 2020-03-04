@@ -63,7 +63,13 @@ const UA: React.FC = () => {
         </motion.div>
       </Box>
       <svg
-        css={{ "& img": { width: "100%", height: "100%" } }}
+        css={mq({
+          display: ["none", "block"],
+          "& img": {
+            width: "100%",
+            height: "100%",
+          },
+        })}
         width="100%"
         height="100%"
         viewBox="0 0 1200 661"
@@ -125,6 +131,28 @@ const UA: React.FC = () => {
             />
           </Image>
         </motion.foreignObject>
+      </svg>
+      <svg
+        css={mq({
+          display: ["block", "none"],
+          "& img": {
+            width: "100%",
+            height: "100%",
+          },
+        })}
+        width="100%"
+        height="100%"
+        viewBox="0 0 600 645"
+      >
+        <foreignObject width="595px" height="645px" y="0" x="0">
+          <Image as="picture">
+            <source
+              srcSet="/img/webp/work/ua/composition@1x.webp"
+              type="image/webp"
+            />
+            <img src="/img/jpg/work/ua/composition@1x.jpg" />
+          </Image>
+        </foreignObject>
       </svg>
     </motion.div>
   );
