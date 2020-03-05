@@ -32,7 +32,7 @@ const Countr: React.FC = () => {
           Countr
         </Text>
         <motion.div initial="closed" variants={workTextVariants}>
-          <Text opacity={0} fontSize={1}>
+          <Text display={["none", "block"]} opacity={0} fontSize={1}>
             UI, UX, Front-End Development
           </Text>
         </motion.div>

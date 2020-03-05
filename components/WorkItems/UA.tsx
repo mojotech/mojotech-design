@@ -57,7 +57,12 @@ const UA: React.FC = () => {
           Under Armour
         </Text>
         <motion.div initial="closed" variants={workTextVariants}>
-          <Text color="dark" opacity={0} fontSize={1}>
+          <Text
+            display={["none", "block"]}
+            color="dark"
+            opacity={0}
+            fontSize={1}
+          >
             UI, UX, Front-End Development
           </Text>
         </motion.div>

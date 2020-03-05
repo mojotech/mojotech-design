@@ -33,7 +33,7 @@ const Dockwa: React.FC = () => {
           Dockwa
         </Text>
         <motion.div initial="closed" variants={workTextVariants}>
-          <Text fontSize={1} opacity={0}>
+          <Text display={["none", "block"]} opacity={0} fontSize={1}>
             UI, UX, Concept
           </Text>
         </motion.div>

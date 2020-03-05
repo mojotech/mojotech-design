@@ -31,7 +31,7 @@ const Sunrays: React.FC = () => {
           Sunrays
         </Text>
         <motion.div initial="closed" variants={workTextVariants}>
-          <Text fontSize={1} opacity={0}>
+          <Text display={["none", "block"]} fontSize={1} opacity={0}>
             Visual Design, Branding
           </Text>
         </motion.div>
