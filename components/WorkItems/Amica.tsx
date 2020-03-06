@@ -28,9 +28,13 @@ const Amica: React.FC = () => {
       }}
     >
       <Box left={[4, 5, 6]} top={[3, 5, 6]} zIndex={1} position="absolute">
-        <Text fontSize={1}>Amica</Text>
+        <Text fontSize={3} mb={2}>
+          Amica
+        </Text>
         <motion.div initial="closed" variants={workTextVariants}>
-          <Text fontSize={3}>UI, UX, Front-End Development</Text>
+          <Text fontSize={1} opacity={0}>
+            UI, UX, Front-End Development
+          </Text>
         </motion.div>
       </Box>
       <svg

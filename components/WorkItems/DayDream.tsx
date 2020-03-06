@@ -32,11 +32,13 @@ const DayDream: React.FC = () => {
       })}
     >
       <Box left={[4, 5, 6]} top={[4, 5, 6]} zIndex={1} position="absolute">
-        <Text fontSize={1} mb={2}>
+        <Text fontSize={3} mb={2}>
           DayDream
         </Text>
         <motion.div initial="closed" variants={workTextVariants}>
-          <Text fontSize={3}>UI, UX, Strategy</Text>
+          <Text fontSize={1} opacity={0}>
+            UI, UX, Strategy
+          </Text>
         </motion.div>
       </Box>
       <svg
