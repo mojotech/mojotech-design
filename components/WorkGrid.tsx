@@ -1,4 +1,6 @@
+/** @jsx jsx */
 import * as React from "react";
+import { jsx } from "@emotion/core";
 import { AutoGrid } from "@mojotech/mojo-ui";
 
 import UA from "./WorkItems/UA";
@@ -17,6 +19,13 @@ const WorkGrid: React.FC = () => (
     mb={5}
     mx="auto"
     gridTemplateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
+    css={{
+      "@media(max-width: 600px)": {
+        "& *": {
+          transform: "none !important",
+        },
+      },
+    }}
   >
     <UA />
     <Countr />
