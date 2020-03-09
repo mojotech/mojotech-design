@@ -31,7 +31,7 @@ const Fasset: React.FC = () => {
           Fasset
         </Text>
         <motion.div initial="closed" variants={workTextVariants}>
-          <Text fontSize={1} opacity={0}>
+          <Text display={["none", "block"]} fontSize={1} opacity={0}>
             UI, UX, Concept
           </Text>
         </motion.div>

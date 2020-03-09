@@ -32,7 +32,7 @@ const Amica: React.FC = () => {
           Amica
         </Text>
         <motion.div initial="closed" variants={workTextVariants}>
-          <Text fontSize={1} opacity={0}>
+          <Text display={["none", "block"]} fontSize={1} opacity={0}>
             UI, UX, Front-End Development
           </Text>
         </motion.div>
