@@ -9,39 +9,23 @@ export const valueData = [
     title: "Work hard",
     copy:
       "We respect one another and pull our own weight, but are always ready to lend a hand.",
-    gif: [
-      "https://media.giphy.com/media/J2BKcQ1xxkPrq/giphy.gif",
-      "https://media.giphy.com/media/9uIapz6tbMaxPAuqaM/giphy.gif",
-      "https://media.giphy.com/media/iOz3p2txHIo4U/giphy.gif",
-    ],
+    gif: ["https://media.giphy.com/media/J2BKcQ1xxkPrq/giphy.gif"],
   },
   {
     title: "Have fun",
     copy: "It's important to stay fresh. We have a healthy work/life balance.",
-    gif: [
-      "https://media.giphy.com/media/J2BKcQ1xxkPrq/giphy.gif",
-      "https://media.giphy.com/media/9uIapz6tbMaxPAuqaM/giphy.gif",
-      "https://media.giphy.com/media/iOz3p2txHIo4U/giphy.gif",
-    ],
+    gif: ["https://media.giphy.com/media/iOz3p2txHIo4U/source.gif"],
   },
   {
     title: "Be professional",
     copy: "Show up on time. Don't have an ego. Over deliver.",
-    gif: [
-      "https://media.giphy.com/media/J2BKcQ1xxkPrq/giphy.gif",
-      "https://media.giphy.com/media/9uIapz6tbMaxPAuqaM/giphy.gif",
-      "https://media.giphy.com/media/iOz3p2txHIo4U/giphy.gif",
-    ],
+    gif: ["https://media.giphy.com/media/9uIapz6tbMaxPAuqaM/giphy.gif"],
   },
   {
     title: "Keep learning",
     copy:
       "Don't let your skills go stale. Find time to grow and share what you learn.",
-    gif: [
-      "https://media.giphy.com/media/J2BKcQ1xxkPrq/giphy.gif",
-      "https://media.giphy.com/media/9uIapz6tbMaxPAuqaM/giphy.gif",
-      "https://media.giphy.com/media/iOz3p2txHIo4U/giphy.gif",
-    ],
+    gif: ["https://media.giphy.com/media/jilrDBUHd4V1e/source.gif"],
   },
 ];
 
