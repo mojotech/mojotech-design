@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import * as React from "react";
-import Link from "next/link";
 import { motion, useViewportScroll } from "framer-motion";
 import { jsx } from "@emotion/core";
-import { Box, Wrap, AutoGrid, Text, TextLink } from "@mojotech/mojo-ui";
+import { Box, Wrap, AutoGrid, TextLink } from "@mojotech/mojo-ui";
 
 import Logo from "../components/Logo";
 import { mq } from "../lib/utils";
@@ -58,11 +57,6 @@ const Footer: React.FunctionComponent = () => {
           }}
         >
           <Box as="ul">
-            <li>
-              <Link scroll={false} href="/intern/" passHref>
-                <Text as="a">Internships</Text>
-              </Link>
-            </li>
             <li>
               <TextLink
                 href="https://mojotech.com/"
