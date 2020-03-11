@@ -40,8 +40,8 @@ const Values: React.FC = () => {
         gridTemplateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
         gridGap={0}
       >
-        {valueData.map(v => (
-          <Value title={v.title} copy={v.copy} gif={v.gif} />
+        {valueData.map((v, idx) => (
+          <Value key={idx} title={v.title} copy={v.copy} gif={v.gif} />
         ))}
       </AutoGrid>
     </Wrap>
