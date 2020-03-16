@@ -11,7 +11,6 @@ module.exports = {
     return {
       "/": { page: "/" },
       "/hiring": { page: "/hiring" },
-      "/intern": { page: "/intern" },
     };
   },
 };
