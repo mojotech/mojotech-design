@@ -11,10 +11,10 @@ const Slider: React.FC = props => {
 
   const scrollValue = useTransform(x, value => {
     if (ref.current) {
-      return clamp(value, ref.current.scrollWidth * -1 + 200, 0);
+      return clamp(value, ref.current.scrollWidth * -1 * 0.66 + 200, 0);
     }
 
-    return clamp(value, -3500, 0);
+    return clamp(value, 0, 0);
   });
 
   return (
