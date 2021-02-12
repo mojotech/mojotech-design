@@ -48,7 +48,7 @@ const Lifestyle: React.FC = () => (
             marginBottom={0}
             underline
           >
-            Join our team in Providence, RI
+            Learn about our hiring process.
           </TextLink>
         </Link>
       </Flex>
@@ -91,7 +91,7 @@ const BadgeCTA: React.FC<BadgeProps> = ({ jobType = "designer" }) => (
   </Wrap>
 );
 
-const CTA: React.FC<Props> = props => (
+const CTA: React.FC<Props> = (props) => (
   <Box>
     {props.type === "badge" ? (
       <BadgeCTA jobType={props.jobType} />
