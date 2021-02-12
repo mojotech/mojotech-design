@@ -48,7 +48,7 @@ const Lifestyle: React.FC = () => (
             marginBottom={0}
             underline
           >
-            Join our team in Providence, RI
+            Learn about our hiring process.
           </TextLink>
         </Link>
       </Flex>
@@ -80,6 +80,21 @@ const BadgeCTA: React.FC<BadgeProps> = ({ jobType = "designer" }) => (
         >
           <Button paddingX={4}>Submit your application</Button>
         </a>
+        <Text mt={4} mb={3} fontSize={4}>
+          Join our team in Boulder, CO
+        </Text>
+        <a
+          href={
+            jobType === "designer"
+              ? "https://mojotech.bamboohr.com/jobs/view.php?id=18"
+              : "https://docs.google.com/forms/d/e/1FAIpQLSej1eyOsKhVtPN4XHkMPYVmnmPKvkwk20cnlrGSS6KOGi1xwQ/viewform"
+          }
+          rel="noopener noreferrer"
+          target="_blank"
+          css={{ textDecoration: "none" }}
+        >
+          <Button paddingX={4}>Submit your application</Button>
+        </a>
       </Box>
       <Box ml={3} display={["none", "block"]}>
         <Image
@@ -91,7 +106,7 @@ const BadgeCTA: React.FC<BadgeProps> = ({ jobType = "designer" }) => (
   </Wrap>
 );
 
-const CTA: React.FC<Props> = props => (
+const CTA: React.FC<Props> = (props) => (
   <Box>
     {props.type === "badge" ? (
       <BadgeCTA jobType={props.jobType} />

@@ -21,7 +21,7 @@ export const workTextVariants = {
 
 export const workImageVariants = {
   open: {
-    y: 200,
+    y: 115,
     transition: {
       type: "spring",
       stiffness: 65,
