@@ -1,5 +1,10 @@
+/** @jsx jsx */
 import * as React from "react";
 import { AutoGrid, Box, Text, Wrap, Image } from "@mojotech/mojo-ui";
+import { jsx } from "@emotion/core";
+import Link from "next/link";
+
+import RatioBox from "./RatioBox";
 
 const StaffGrid: React.FC = () => (
   <Wrap mb={5}>
@@ -30,10 +35,6 @@ const StaffGrid: React.FC = () => (
         <Text>Andy Birch</Text>
       </Box>
       <Box>
-        <Image mb={1} src="/img/jpg/manolov.jpg" />
-        <Text>Ivan Manolov</Text>
-      </Box>
-      <Box>
         <Image mb={1} src="/img/jpg/hoyos.jpg" />
         <Text>Jesse Hoyos</Text>
       </Box>
@@ -41,6 +42,27 @@ const StaffGrid: React.FC = () => (
         <Image mb={1} src="/img/jpg/wynn.jpg" />
         <Text>Chris Wynn</Text>
       </Box>
+      <Link scroll={false} passHref href="/hiring/">
+        <Box as="a" css={{ textDecoration: "none" }}>
+          <RatioBox
+            aspectRatio={[400, 400]}
+            css={{
+              alignItems: "center",
+              backgroundColor: "#2b2836",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Text paddingX={3} textAlign="center" color="mediumGray">
+              If this bothers you, fix it by joining the team.
+              <br />
+              <Text as="span" fontSize={3}>
+                &#129309;
+              </Text>
+            </Text>
+          </RatioBox>
+        </Box>
+      </Link>
     </AutoGrid>
   </Wrap>
 );
