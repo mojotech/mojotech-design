@@ -1,7 +1,15 @@
 /** @jsx jsx */
 import * as React from "react";
 import { jsx } from "@emotion/core";
-import { Box, AutoGrid, Wrap, Text, Image, Flex } from "@mojotech/mojo-ui";
+import {
+  Box,
+  AutoGrid,
+  Wrap,
+  Text,
+  Image,
+  Flex,
+  TextLink,
+} from "@mojotech/mojo-ui";
 
 import Layout from "../components/Layout";
 import Flow from "../components/Flow";
@@ -152,7 +160,15 @@ function Hiring(): React.ReactElement {
             <Flex mb={3} alignItems="center" as="li">
               <Image width={40} mr={2} height={40} src="/img/svg/02.svg" />
               <Text mb="0px" fontSize={2}>
-                Screener call &amp; Portfolio Review
+                Screener call &amp;{" "}
+                <TextLink
+                  underline
+                  scheme="dark"
+                  href="https://www.mojotech.com/blog/designing-a-better-portfolio/"
+                  fontSize="inherit"
+                >
+                  Portfolio Review
+                </TextLink>
               </Text>
             </Flex>
             <Flex mb={3} alignItems="center" as="li">
