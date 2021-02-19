@@ -6,6 +6,8 @@ import { ThemeProvider } from "emotion-theming";
 import { Global } from "@emotion/core";
 import { ThemeDecorator, BaseTheme } from "@mojotech/mojo-ui";
 
+import Header from "../components/Header";
+
 const App = ({ Component, pageProps, router }: AppProps) => {
   const { colors } = BaseTheme;
 
@@ -28,6 +30,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
         }}
       />
       <ThemeDecorator>
+        <Header />
         <AnimatePresence exitBeforeEnter initial={false}>
           <motion.div
             key={router.route}
