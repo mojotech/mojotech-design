@@ -4,6 +4,8 @@ import { jsx } from "@emotion/core";
 import Link from "next/link";
 import { Flex, Button } from "@mojotech/mojo-ui";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+
 import { useScrollPos } from "../lib/use-scroll-pos";
 
 import Logo from "./Logo";
@@ -27,6 +29,8 @@ const headerVariants = {
 
 const Header: React.FC = () => {
   const scrollPos = useScrollPos();
+  const { pathname } = useRouter();
+
   return (
     <Flex
       pos="fixed"
@@ -53,7 +57,9 @@ const Header: React.FC = () => {
         variants={headerVariants}
       >
         <Link href="/hiring/">
-          <Button paddingX={4}>Apply</Button>
+          <Button paddingX={4} css={{ opacity: pathname === "/" ? 1 : 0 }}>
+            Apply
+          </Button>
         </Link>
       </motion.div>
     </Flex>
