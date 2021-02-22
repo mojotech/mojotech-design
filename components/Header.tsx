@@ -58,7 +58,7 @@ const Header: React.FC = () => {
       >
         <Link href="/hiring/">
           <Button paddingX={4} css={{ opacity: pathname === "/" ? 1 : 0 }}>
-            Apply
+            Join the team
           </Button>
         </Link>
       </motion.div>
