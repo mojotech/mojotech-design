@@ -1,43 +1,36 @@
 {
-  "name": "mojotech-design",
-  "description": "MojoTech Design",
-  "version": "0.0.1",
-  "author": "jssee",
-  "ava": {
-    "verbose": "true"
+  "name": "mojotech-design-next",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "next",
+    "build": "next build && next export",
+    "next:start": "next start"
   },
-  "bugs": "https://github.com/jssee/mojotech-design/issues",
   "dependencies": {
-    "basicscroll": "^2.1.1",
-    "intersection-observer": "^0.5.0",
-    "lazysizes": "^4.1.2",
-    "minireset.css": "^0.0.3",
-    "popmotion": "^8.3.6",
-    "reshape-standard": "^3.3.0",
-    "scrollama": "^1.4.3",
-    "spike": "^2.3.0",
-    "spike-css-standards": "^4.0.0",
-    "spike-js-standards": "^2.1.0",
-    "spike-optimize": "^0.1.2",
-    "spike-page-id": "^1.1.0"
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
+    "@mojotech/mojo-ui": "^1.12.0",
+    "emotion-theming": "^10.0.27",
+    "facepaint": "^1.2.1",
+    "framer-motion": "^1.7.0",
+    "next": "^9.1.7",
+    "onno-react": "^1.0.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
-    "rimraf": "^2.6.1",
-    "snazzy": "^7.0.0",
-    "standard": "^10.0.2"
-  },
-  "homepage": "https://github.com/jssee/mojotech-design",
-  "main": "app.js",
-  "private": true,
-  "repository": "https://github.com/jssee/mojotech-design",
-  "scripts": {
-    "lint": "standard | snazzy",
-    "precommit": "npm run lint -s",
-    "pretest": "npm run lint -s",
-    "test": "NODE_ENV=test ava",
-    "start": "spike watch",
-    "build": "spike compile",
-    "prod": "NODE_ENV=production spike compile -e production"
+    "@babel/preset-env": "^7.7.6",
+    "@svgr/webpack": "^5.0.1",
+    "@types/facepaint": "^1.2.1",
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.15",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "csstype": "^2.6.7",
+    "eslint": "^6.7.2",
+    "eslint-config-healthier": "^3.2.0",
+    "typescript": "^3.7.3"
   }
 }
