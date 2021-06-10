@@ -38,6 +38,10 @@ const StaffGrid: React.FC = () => (
         <Image mb={1} src="/img/jpg/wynn.jpg" />
         <Text>Chris Wynn</Text>
       </Box>
+      <Box>
+        <Image mb={1} src="/img/jpg/lang.jpg" />
+        <Text>Rachel Lang</Text>
+      </Box>
       <Link scroll={false} passHref href="/hiring/">
         <Box as="a" css={{ textDecoration: "none" }}>
           <RatioBox
