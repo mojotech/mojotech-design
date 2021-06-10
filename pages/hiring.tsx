@@ -191,6 +191,19 @@ function Hiring(): React.ReactElement {
             </Flex>
           </Box>
         </Wrap>
+        <Wrap>
+          <Box mt={5}>
+            <Text mb={3} fontSize={4}>
+              The Opportunity
+            </Text>
+            <Text mb={4} fontSize={2}>
+              Being a designer at MojoTech means you’ll have the freedom and
+              responsibility to influence teams, clients, and companies through
+              research, creativity and collaboration. We’re looking for people
+              who are ready to take charge, and ship quality products.
+            </Text>
+          </Box>
+        </Wrap>
         <CTA type="badge" />
       </Layout>
     </Box>

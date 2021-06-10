@@ -2,15 +2,7 @@
 import * as React from "react";
 import { jsx } from "@emotion/core";
 import Link from "next/link";
-import {
-  Box,
-  Wrap,
-  Flex,
-  Button,
-  Text,
-  TextLink,
-  Image,
-} from "@mojotech/mojo-ui";
+import { Box, Wrap, Flex, Text, TextLink, Image } from "@mojotech/mojo-ui";
 
 type Job = "intern" | "designer";
 
@@ -56,7 +48,7 @@ const Lifestyle: React.FC = () => (
   </Wrap>
 );
 
-const BadgeCTA: React.FC<BadgeProps> = ({ jobType = "designer" }) => (
+const BadgeCTA: React.FC<BadgeProps> = () => (
   <Wrap mb={5}>
     <Flex
       alignItems="center"
@@ -65,36 +57,66 @@ const BadgeCTA: React.FC<BadgeProps> = ({ jobType = "designer" }) => (
       minHeight={["auto", "40vh"]}
     >
       <Box>
-        <Text mb={3} fontSize={4}>
+        <Text mb={3} fontSize={3}>
           Join our team in Providence, RI
         </Text>
-        <a
-          href={
-            jobType === "designer"
-              ? "https://mojotech.bamboohr.com/jobs/view.php?id=3"
-              : "https://docs.google.com/forms/d/e/1FAIpQLSej1eyOsKhVtPN4XHkMPYVmnmPKvkwk20cnlrGSS6KOGi1xwQ/viewform"
-          }
+        <TextLink
+          textAlign="center"
+          scheme="dark"
+          fontSize={2}
+          marginBottom={3}
+          underline
+          href="https://mojotech.bamboohr.com/jobs/view.php?id=26"
           rel="noopener noreferrer"
           target="_blank"
-          css={{ textDecoration: "none" }}
+          display="inline-block"
         >
-          <Button paddingX={4}>Submit your application</Button>
-        </a>
-        <Text mt={4} mb={3} fontSize={4}>
+          Senior UX/UI Designer
+        </TextLink>
+        <br />
+        <TextLink
+          textAlign="center"
+          scheme="dark"
+          fontSize={2}
+          marginBottom={0}
+          underline
+          href="https://mojotech.bamboohr.com/jobs/view.php?id=28"
+          rel="noopener noreferrer"
+          target="_blank"
+          display="inline-block"
+        >
+          UX/UI Designer
+        </TextLink>
+        <Text mt={4} mb={3} fontSize={3}>
           Join our team in Boulder, CO
         </Text>
-        <a
-          href={
-            jobType === "designer"
-              ? "https://mojotech.bamboohr.com/jobs/view.php?id=18"
-              : "https://docs.google.com/forms/d/e/1FAIpQLSej1eyOsKhVtPN4XHkMPYVmnmPKvkwk20cnlrGSS6KOGi1xwQ/viewform"
-          }
+        <TextLink
+          textAlign="center"
+          scheme="dark"
+          fontSize={2}
+          marginBottom={3}
+          underline
+          href="https://mojotech.bamboohr.com/jobs/view.php?id=25"
           rel="noopener noreferrer"
           target="_blank"
-          css={{ textDecoration: "none" }}
+          display="inline-block"
         >
-          <Button paddingX={4}>Submit your application</Button>
-        </a>
+          Senior UX/UI Designer
+        </TextLink>
+        <br />
+        <TextLink
+          textAlign="center"
+          scheme="dark"
+          fontSize={2}
+          marginBottom={0}
+          underline
+          href="https://mojotech.bamboohr.com/jobs/view.php?id=27"
+          rel="noopener noreferrer"
+          target="_blank"
+          display="inline-block"
+        >
+          UX/UI Designer
+        </TextLink>
       </Box>
       <Box ml={3} display={["none", "block"]}>
         <Image
