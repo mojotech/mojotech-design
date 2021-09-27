@@ -64,20 +64,6 @@ const BadgeCTA: React.FC<BadgeProps> = () => (
           textAlign="center"
           scheme="dark"
           fontSize={2}
-          marginBottom={3}
-          underline
-          href="https://mojotech.bamboohr.com/jobs/view.php?id=26"
-          rel="noopener noreferrer"
-          target="_blank"
-          display="inline-block"
-        >
-          Senior UX/UI Designer
-        </TextLink>
-        <br />
-        <TextLink
-          textAlign="center"
-          scheme="dark"
-          fontSize={2}
           marginBottom={0}
           underline
           href="https://mojotech.bamboohr.com/jobs/view.php?id=28"
@@ -90,20 +76,6 @@ const BadgeCTA: React.FC<BadgeProps> = () => (
         <Text mt={4} mb={3} fontSize={3}>
           Join our team in Boulder, CO
         </Text>
-        <TextLink
-          textAlign="center"
-          scheme="dark"
-          fontSize={2}
-          marginBottom={3}
-          underline
-          href="https://mojotech.bamboohr.com/jobs/view.php?id=25"
-          rel="noopener noreferrer"
-          target="_blank"
-          display="inline-block"
-        >
-          Senior UX/UI Designer
-        </TextLink>
-        <br />
         <TextLink
           textAlign="center"
           scheme="dark"
