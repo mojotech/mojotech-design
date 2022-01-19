@@ -2,7 +2,7 @@
 import * as React from "react";
 import { jsx } from "@emotion/core";
 import Link from "next/link";
-import { Box, Wrap, Flex, Text, TextLink, Image } from "@mojotech/mojo-ui";
+import { Box, Wrap, Flex, Text, TextLink, Image, Button } from "@mojotech/mojo-ui";
 
 type Job = "intern" | "designer";
 
@@ -48,55 +48,16 @@ const Lifestyle: React.FC = () => (
   </Wrap>
 );
 
+
 const BadgeCTA: React.FC<BadgeProps> = () => (
   <Wrap mb={5}>
-    <Flex
-      alignItems="center"
-      justifyContent="space-between"
-      flexWrap="nowrap"
-      minHeight={["auto", "40vh"]}
-    >
       <Box>
-        <Text mb={3} fontSize={3}>
-          Join our team in Providence, RI
+        <Text as="a" href="https://mojotech.bamboohr.com/jobs/view.php?id=34">
+          <Button paddingX={4}>
+            Apply now!
+          </Button>
         </Text>
-        <TextLink
-          textAlign="center"
-          scheme="dark"
-          fontSize={2}
-          marginBottom={0}
-          underline
-          href="https://mojotech.bamboohr.com/jobs/view.php?id=28"
-          rel="noopener noreferrer"
-          target="_blank"
-          display="inline-block"
-        >
-          UX/UI Designer
-        </TextLink>
-        <Text mt={4} mb={3} fontSize={3}>
-          Join our team in Boulder, CO
-        </Text>
-        <TextLink
-          textAlign="center"
-          scheme="dark"
-          fontSize={2}
-          marginBottom={0}
-          underline
-          href="https://mojotech.bamboohr.com/jobs/view.php?id=27"
-          rel="noopener noreferrer"
-          target="_blank"
-          display="inline-block"
-        >
-          UX/UI Designer
-        </TextLink>
       </Box>
-      <Box ml={3} display={["none", "block"]}>
-        <Image
-          css={{ height: "100%", width: "auto" }}
-          src="/img/png/badge.png"
-        />
-      </Box>
-    </Flex>
   </Wrap>
 );
 
