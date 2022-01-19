@@ -174,7 +174,7 @@ function Hiring(): React.ReactElement {
             <Flex mb={3} alignItems="center" as="li">
               <Image width={40} mr={2} height={40} src="/img/svg/03.svg" />
               <Text mb="0px" fontSize={2}>
-                Design challenge
+                Design challenge (if needed)
               </Text>
             </Flex>
             <Flex mb={3} alignItems="center" as="li">
