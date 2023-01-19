@@ -59,7 +59,7 @@ const Lifestyle: React.FC = () => (
 const BadgeCTA: React.FC<BadgeProps> = () => (
   <Wrap mb={5}>
     <Box>
-      <Text as="a" href="https://mojotech.bamboohr.com/jobs/view.php?id=34">
+      <Text as="a" href="https://www.mojotech.com/jobs/">
         <Button paddingX={4}>Apply now!</Button>
       </Text>
     </Box>
