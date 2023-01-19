@@ -38,10 +38,6 @@ const StaffGrid: React.FC = () => (
         <Text>Chris Wynn</Text>
       </Box>
       <Box>
-        <Image mb={1} src="/img/jpg/lang.jpg" />
-        <Text>Rachel Lang</Text>
-      </Box>
-      <Box>
         <Image mb={1} src="/img/jpg/clary.jpg" />
         <Text>Linzi Clary</Text>
       </Box>
