@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from "react";
 import { jsx } from "@emotion/core";
-import { AutoGrid } from "@mojotech/mojo-ui";
+import { AutoGrid, Wrap } from "@mojotech/mojo-ui";
 
 import UA from "./WorkItems/UA";
 import Countr from "./WorkItems/Countr";
@@ -13,29 +13,28 @@ import Amica from "./WorkItems/Amica";
 import Dockwa from "./WorkItems/Dockwa";
 
 const WorkGrid: React.FC = () => (
-  <AutoGrid
-    maxw={[0, 3]}
-    px={3}
-    mb={5}
-    mx="auto"
-    gridTemplateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
-    css={{
-      "@media(max-width: 600px)": {
-        "& *": {
-          transform: "none !important",
+  <Wrap gridColumn="1 / -1">
+    <AutoGrid
+      mb={5}
+      css={{
+        "@media(max-width: 600px)": {
+          "& *": {
+            transform: "none !important",
+          },
         },
-      },
-    }}
-  >
-    <UA />
-    <Countr />
-    <ETS />
-    <DayDream />
-    <Fasset />
-    <Sunrays />
-    <Amica />
-    <Dockwa />
-  </AutoGrid>
+      }}
+      gridGap={[24, 48]}
+    >
+      <UA />
+      <Countr />
+      <ETS />
+      <DayDream />
+      <Fasset />
+      <Sunrays />
+      <Amica />
+      <Dockwa />
+    </AutoGrid>
+  </Wrap>
 );
 
 export default WorkGrid;

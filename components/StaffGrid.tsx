@@ -8,7 +8,7 @@ import RatioBox from "./RatioBox";
 
 const StaffGrid: React.FC = () => (
   <Wrap mb={5}>
-    <Text mb={3} fontSize={4}>
+    <Text mb={3} fontSize={4} fontFamily="regular">
       Meet the team
     </Text>
     <Text mb={4} fontSize={1}>
@@ -18,9 +18,8 @@ const StaffGrid: React.FC = () => (
       hopefully making people’s lives a little easier.
     </Text>
     <AutoGrid
-      gridColumnGap={2}
-      gridRowGap={4}
       gridTemplateColumns={["repeat(2, 1fr)", "repeat(3, 1fr)"]}
+      gridGap={[24, 48]}
     >
       <Box>
         <Image mb={1} src="/img/jpg/rossi.jpg" />

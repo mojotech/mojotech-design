@@ -1,15 +1,15 @@
 /** @jsx jsx */
 import * as React from "react";
 import { jsx } from "@emotion/core";
-import { Wrap, Flex, Section } from "@mojotech/mojo-ui";
+import { Wrap, Flex, GridSystem } from "@mojotech/mojo-ui";
 import { motion, useSpring, useTransform } from "framer-motion";
 import { clamp, mq } from "../lib/utils";
 
-const Slider: React.FC = props => {
+const Slider: React.FC = (props) => {
   const x = useSpring(0);
   const ref = React.createRef<HTMLDivElement>();
 
-  const scrollValue = useTransform(x, value => {
+  const scrollValue = useTransform(x, (value) => {
     if (ref.current) {
       return clamp(value, ref.current.scrollWidth * -1 * 0.66 + 200, 0);
     }
@@ -18,8 +18,8 @@ const Slider: React.FC = props => {
   });
 
   return (
-    <Section marginBottom={4} css={{ overflow: "hidden" }}>
-      <Wrap position="relative">
+    <GridSystem paddingX="0px" height="100%">
+      <Wrap position="relative" paddingX="0px">
         <motion.div
           ref={ref}
           drag="x"
@@ -48,7 +48,7 @@ const Slider: React.FC = props => {
           </Flex>
         </motion.div>
       </Wrap>
-    </Section>
+    </GridSystem>
   );
 };
 
