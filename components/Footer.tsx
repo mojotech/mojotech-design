@@ -2,7 +2,7 @@
 import * as React from "react";
 import { motion, useViewportScroll } from "framer-motion";
 import { jsx } from "@emotion/core";
-import { Box, Wrap, AutoGrid, TextLink } from "@mojotech/mojo-ui";
+import { Box, Wrap, AutoGrid, TextLink, GridSystem } from "@mojotech/mojo-ui";
 
 import Logo from "../components/Logo";
 import { mq } from "../lib/utils";
@@ -29,14 +29,14 @@ const Footer: React.FunctionComponent = () => {
   const { scrollYProgress } = useViewportScroll();
 
   React.useEffect(() => {
-    scrollYProgress.onChange(y => {
+    scrollYProgress.onChange((y) => {
       y > 0.95 ? setBottom(true) : setBottom(false);
     });
   });
 
   return (
-    <Box as="footer" paddingY={5} position="relative">
-      <Wrap position="relative" maxWidth={3}>
+    <GridSystem paddingY={5} position="relative">
+      <Wrap as="footer" position="relative" gridColumn="1/-1">
         <motion.div
           animate={bottom ? "bottom" : "top"}
           variants={logoVariants}
@@ -80,7 +80,7 @@ const Footer: React.FunctionComponent = () => {
           </Box>
         </AutoGrid>
       </Wrap>
-    </Box>
+    </GridSystem>
   );
 };
 

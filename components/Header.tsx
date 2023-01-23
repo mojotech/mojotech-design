@@ -2,7 +2,7 @@
 import * as React from "react";
 import { jsx } from "@emotion/core";
 import Link from "next/link";
-import { Flex, Button } from "@mojotech/mojo-ui";
+import { Button, GridSystem, Wrap, zStack, Flex } from "@mojotech/mojo-ui";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
@@ -32,36 +32,40 @@ const Header: React.FC = () => {
   const { pathname } = useRouter();
 
   return (
-    <Flex
-      pos="fixed"
-      jfc="space-between"
-      top={[16, "8vh"]}
-      px={3}
-      left="50%"
-      transform="translateX(-50%)"
-      maxw={[0, 3]}
-      w="100%"
-      zIndex={1}
-      css={{
-        pointerEvents: scrollPos === "bottom" ? "none" : "auto",
-      }}
-    >
-      <motion.div
-        animate={scrollPos === "bottom" ? "bottom" : "top"}
-        variants={headerVariants}
+    <Flex position="fixed" top={[24, "8vh"]} width="100%" zIndex={zStack.toast}>
+      <GridSystem
+        css={{
+          pointerEvents: scrollPos === "bottom" ? "none" : "auto",
+        }}
       >
-        <Logo />
-      </motion.div>
-      <motion.div
-        animate={scrollPos === "bottom" ? "bottom" : "top"}
-        variants={headerVariants}
-      >
-        <Link href="/hiring/">
-          <Button paddingX={4} css={{ opacity: pathname === "/" ? 1 : 0 }}>
-            Join the team
-          </Button>
-        </Link>
-      </motion.div>
+        <Wrap gridColumn="1/-1" position="relative">
+          <motion.div
+            animate={scrollPos === "bottom" ? "bottom" : "top"}
+            variants={headerVariants}
+            css={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+            }}
+          >
+            <Logo />
+          </motion.div>
+          <motion.div
+            animate={scrollPos === "bottom" ? "bottom" : "top"}
+            variants={headerVariants}
+            css={{
+              position: "absolute",
+              right: 0,
+            }}
+          >
+            <Link href="/hiring/">
+              <Button paddingX={4} css={{ opacity: pathname === "/" ? 1 : 0 }}>
+                Join the team
+              </Button>
+            </Link>
+          </motion.div>
+        </Wrap>
+      </GridSystem>
     </Flex>
   );
 };

@@ -2,7 +2,15 @@
 import * as React from "react";
 import { jsx } from "@emotion/core";
 import Link from "next/link";
-import { Box, Wrap, Flex, Text, TextLink, Image, Button } from "@mojotech/mojo-ui";
+import {
+  Box,
+  Wrap,
+  Flex,
+  Text,
+  TextLink,
+  Image,
+  Button,
+} from "@mojotech/mojo-ui";
 
 type Job = "intern" | "designer";
 
@@ -16,7 +24,7 @@ interface Props {
 }
 
 const Lifestyle: React.FC = () => (
-  <Wrap maxWidth={[0, 3]} paddingY={5}>
+  <Wrap paddingY={5} gridColumn="1/-1">
     <Box position="relative">
       <Image display="block" height="auto" maxWidth="100%" mb={4} as="picture">
         <source
@@ -48,27 +56,24 @@ const Lifestyle: React.FC = () => (
   </Wrap>
 );
 
-
 const BadgeCTA: React.FC<BadgeProps> = () => (
   <Wrap mb={5}>
-      <Box>
-        <Text as="a" href="https://mojotech.bamboohr.com/jobs/view.php?id=34">
-          <Button paddingX={4}>
-            Apply now!
-          </Button>
-        </Text>
-      </Box>
+    <Box>
+      <Text as="a" href="https://www.mojotech.com/jobs/">
+        <Button paddingX={4}>Apply now!</Button>
+      </Text>
+    </Box>
   </Wrap>
 );
 
 const CTA: React.FC<Props> = (props) => (
-  <Box>
+  <>
     {props.type === "badge" ? (
       <BadgeCTA jobType={props.jobType} />
     ) : (
       <Lifestyle />
     )}
-  </Box>
+  </>
 );
 
 export default CTA;
