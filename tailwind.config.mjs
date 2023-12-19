@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
@@ -20,6 +22,9 @@ export default {
         bcbsBlue: "#4BB2E5",
         uwBlue: "#125790",
       },
+    },
+    fontFamily: {
+      sans: ["InterTight", ...defaultTheme.fontFamily.sans],
     },
   },
   plugins: [],
