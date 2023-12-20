@@ -1,25 +1,27 @@
 ---
-import Portrait from './Portrait.astro'
+import Portrait from "./Portrait.astro";
 
 type PortraitData = {
-    desc: string;
-    imgSrc: string;
-}
+  person: string;
+  src: string;
+};
 
 interface Props {
-    heading: string;
-    portraits: PortraitData[];
+  heading: string;
+  portraits: PortraitData[];
 }
 
-const { heading, portraits } = Astro.props
+const { heading, portraits } = Astro.props;
 ---
 
-<figure role="group" aria-labelledby="group-figures" class="grid grid-cols-3 gap-12">
-    <figcaption class="text-6xl col-span-full" id="group-figures">
-        {heading}
-    </figcaption>
+<figure
+  role="group"
+  aria-labelledby="group-figures"
+  class="grid grid-cols-3 gap-12"
+>
+  <figcaption class="text-6xl col-span-full" id="group-figures">
+    {heading}
+  </figcaption>
 
-    {portraits.map(({desc, imgSrc}) => ( 
-        <Portrait description={desc} imgSrc={imgSrc} /> 
-    ))}
+  {portraits.map(({ person, src }) => <Portrait {person} {src} />)}
 </figure>

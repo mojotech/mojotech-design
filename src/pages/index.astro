@@ -10,16 +10,16 @@ import MoneyLion from "../components/work/ML.astro";
 import BetterUp from "../components/work/BetterUp.astro";
 import Amica from "../components/work/Amica.astro";
 
-import Portraits from "../components/Portraits.astro"
+import Portraits from "../components/Portraits.astro";
 
 const portraits = [
-  {desc: "Matt Rossi", imgSrc: "/images/portraits/matt.png" },
-  {desc: "Jesse Hoyos", imgSrc: "/images/portraits/jesse.png" },
-  {desc: "Chapman Bettis", imgSrc: "/images/portraits/chapman.png" },
-  {desc: "Linzi Clary", imgSrc: "/images/portraits/linzi.png" },
-  {desc: "Katy Griswold", imgSrc: "/images/portraits/katy.png" },
-  {desc: "Ko Kawazoe", imgSrc: "/images/portraits/ko.png" },
-]
+  { person: "Matt Rossi", src: "/images/portraits/matt.png" },
+  { person: "Jesse Hoyos", src: "/images/portraits/jesse.png" },
+  { person: "Chapman Bettis", src: "/images/portraits/chapman.png" },
+  { person: "Linzi Clary", src: "/images/portraits/linzi.png" },
+  { person: "Katy Griswold", src: "/images/portraits/katy.png" },
+  { person: "Ko Kawazoe", src: "/images/portraits/ko.png" },
+];
 ---
 
 <Layout title="Welcome to Astro.">
@@ -60,7 +60,7 @@ const portraits = [
       <div class="col-span-4 mb-12"><BetterUp /></div>
       <div class="col-span-8 mb-12"><Amica /></div>
       <div class="col-end-11 col-start-3 flex flex-col gap-12">
-        <Portraits heading="Meet the team" portraits={portraits} />
+        <Portraits heading="Meet the team" {portraits} />
       </div>
     </Grid>
   </main>

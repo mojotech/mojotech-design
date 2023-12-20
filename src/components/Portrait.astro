@@ -1,13 +1,16 @@
 ---
-// js
 interface Props {
-    imgSrc: string;
-    description: string;
+  src: string;
+  person: string;
 }
-const { description, imgSrc } = Astro.props
+const { person, src } = Astro.props;
 ---
 
 <figure class="flex flex-col gap-4">
-    <img src={imgSrc} class="aspect-square" alt={`a portrait of team member ${description}`} />
-    <figcaption class="whitespace-nowrap capitalize">{description}</figcaption>
+  <img
+    {src}
+    class="aspect-square"
+    alt={`a portrait of team member ${person}`}
+  />
+  <figcaption class="whitespace-nowrap capitalize">{person}</figcaption>
 </figure>
