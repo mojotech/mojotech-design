@@ -1,3 +1,6 @@
 {
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "plugins": ["prettier-plugin-astro"],
+  "astroAllowShorthand": true,
+  "overrides": [{ "files": "*.astro", "options": { "parser": "astro" } }]
 }
