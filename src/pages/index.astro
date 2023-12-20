@@ -9,6 +9,17 @@ import DowJones from "../components/work/Dow.astro";
 import MoneyLion from "../components/work/ML.astro";
 import BetterUp from "../components/work/BetterUp.astro";
 import Amica from "../components/work/Amica.astro";
+
+import Portraits from "../components/Portraits.astro"
+
+const portraits = [
+  {desc: "Matt Rossi", imgSrc: "/images/portraits/matt.png" },
+  {desc: "Jesse Hoyos", imgSrc: "/images/portraits/jesse.png" },
+  {desc: "Chapman Bettis", imgSrc: "/images/portraits/chapman.png" },
+  {desc: "Linzi Clary", imgSrc: "/images/portraits/linzi.png" },
+  {desc: "Katy Griswold", imgSrc: "/images/portraits/katy.png" },
+  {desc: "Ko Kawazoe", imgSrc: "/images/portraits/ko.png" },
+]
 ---
 
 <Layout title="Welcome to Astro.">
@@ -48,6 +59,9 @@ import Amica from "../components/work/Amica.astro";
       <div class="col-span-4"></div>
       <div class="col-span-4 mb-12"><BetterUp /></div>
       <div class="col-span-8 mb-12"><Amica /></div>
+      <div class="col-end-11 col-start-3 flex flex-col gap-12">
+        <Portraits heading="Meet the team" portraits={portraits} />
+      </div>
     </Grid>
   </main>
 </Layout>
