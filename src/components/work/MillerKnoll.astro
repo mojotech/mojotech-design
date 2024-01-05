@@ -1,5 +1,21 @@
-<div class="w-full aspect-video bg-[#FA4D31] flex justify-center">
+<div
+  data-mk
+  class="w-full aspect-video bg-[#FA4D31] flex justify-center relative"
+>
   <img class="max-w-[15rem]" src="/images/work/MillerKnoll.svg" />
+  <img
+    data-mk-hover
+    class="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
+    srcset="/images/work/hover/millerknoll@1x.webp 480w, /images/work/hover/millerknoll@2x.webp 800w"
+    sizes="(max-width: 600px) 480px,
+         800px"
+    src="/images/work/hover/millerknoll@2x.webp"
+  />
 </div>
 <p>Miller Knoll</p>
 <p>Product discovery, UI/UX modernization, accelerated onboarding</p>
+
+<script>
+  import handleWorkAnimation from "../../lib/workAnimation.ts";
+  handleWorkAnimation("[data-mk]", "[data-mk-hover]");
+</script>

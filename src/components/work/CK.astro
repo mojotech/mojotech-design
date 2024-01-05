@@ -1,5 +1,21 @@
-<div class="w-full aspect-[25/35] bg-[#BD65DB] flex justify-center">
+<div
+  data-ck
+  class="w-full aspect-[25/35] bg-[#BD65DB] flex justify-center relative"
+>
   <img class="max-w-[12rem]" src="/images/work/CreditKarma.svg" />
+  <img
+    data-ck-hover
+    class="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
+    srcset="/images/work/hover/creditkarma@1x.webp 480w, /images/work/hover/creditkarma@2x.webp 800w"
+    sizes="(max-width: 600px) 480px,
+         800px"
+    src="/images/work/hover/creditkarma@2x.webp"
+  />
 </div>
 <p>Credit Karma</p>
 <p>UI/UX internationalization & integrations</p>
+
+<script>
+  import handleWorkAnimation from "../../lib/workAnimation.ts";
+  handleWorkAnimation("[data-ck]", "[data-ck-hover]");
+</script>

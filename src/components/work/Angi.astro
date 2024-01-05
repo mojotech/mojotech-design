@@ -1,5 +1,21 @@
-<div class="w-full aspect-[53/32] bg-[#003359] flex justify-center">
+<div
+  data-angi
+  class="w-full aspect-[53/32] bg-[#003359] flex justify-center relative"
+>
   <img class="max-w-[8rem]" src="/images/work/Angi.svg" />
+  <img
+    data-angi-hover
+    class="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
+    srcset="/images/work/hover/angi@1x.webp 480w, /images/work/hover/angi@2x.webp 800w"
+    sizes="(max-width: 600px) 480px,
+         800px"
+    src="/images/work/hover/angi@2x.webp"
+  />
 </div>
 <p>Angi</p>
 <p>Enterprise integrations, app upgrades, user experience, visual design</p>
+
+<script>
+  import handleWorkAnimation from "../../lib/workAnimation.ts";
+  handleWorkAnimation("[data-angi]", "[data-angi-hover]");
+</script>

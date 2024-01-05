@@ -1,5 +1,21 @@
-<div class="w-full aspect-square bg-[#F7DDE1] flex justify-center">
+<div
+  data-bu
+  class="w-full aspect-square bg-[#F7DDE1] flex justify-center relative"
+>
   <img class="max-w-[10rem]" src="/images/work/BetterUp.svg" />
+  <img
+    data-bu-hover
+    class="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
+    srcset="/images/work/hover/betterup@1x.webp 480w, /images/work/hover/betterup@2x.webp 800w"
+    sizes="(max-width: 600px) 480px,
+         800px"
+    src="/images/work/hover/betterup@2x.webp"
+  />
 </div>
 <p>BetterUp</p>
 <p>Lorem ipsum</p>
+
+<script>
+  import handleWorkAnimation from "../../lib/workAnimation.ts";
+  handleWorkAnimation("[data-bu]", "[data-bu-hover]");
+</script>
