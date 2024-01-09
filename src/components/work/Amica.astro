@@ -1,0 +1,21 @@
+<div
+  data-amica
+  class="w-full aspect-[53/32] bg-[#00A891] flex justify-center relative"
+>
+  <img class="max-w-[10rem]" src="/images/work/Amica.svg" />
+  <img
+    data-amica-hover
+    class="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
+    srcset="/images/work/hover/amica@1x.webp 480w, /images/work/hover/amica@2x.webp 800w"
+    sizes="(max-width: 600px) 480px,
+         800px"
+    src="/images/work/hover/amica@2x.webp"
+  />
+</div>
+<p>Amica</p>
+<p>App modernization, digital transformation</p>
+
+<script>
+  import handleWorkAnimation from "../../lib/workAnimation.ts";
+  handleWorkAnimation("[data-amica]", "[data-amica-hover]");
+</script>

@@ -1,0 +1,21 @@
+<div
+  data-dow
+  class="w-full aspect-square bg-[#FFED4D] flex justify-center relative"
+>
+  <img class="max-w-[6rem]" src="/images/work/DowJones.svg" />
+  <img
+    data-dow-hover
+    class="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
+    srcset="/images/work/hover/dowjones@1x.webp 480w, /images/work/hover/dowjones@2x.webp 800w"
+    sizes="(max-width: 600px) 480px,
+         800px"
+    src="/images/work/hover/dowjones@2x.webp"
+  />
+</div>
+<p>Dow Jones</p>
+<p>Lorem ipsum</p>
+
+<script>
+  import handleWorkAnimation from "../../lib/workAnimation.ts";
+  handleWorkAnimation("[data-dow]", "[data-dow-hover]");
+</script>
