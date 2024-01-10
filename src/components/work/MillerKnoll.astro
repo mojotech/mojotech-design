@@ -2,7 +2,7 @@
   data-mk
   class="w-full aspect-video bg-[#FA4D31] flex justify-center relative"
 >
-  <img class="max-w-[15rem]" src="/images/work/MillerKnoll.svg" />
+  <img data-mk-logo class="max-w-[15rem]" src="/images/work/MillerKnoll.svg" />
   <img
     data-mk-hover
     class="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
@@ -17,5 +17,5 @@
 
 <script>
   import handleWorkAnimation from "../../lib/workAnimation.ts";
-  handleWorkAnimation("[data-mk]", "[data-mk-hover]");
+  handleWorkAnimation("[data-mk]", "[data-mk-hover]", "[data-mk-logo]");
 </script>

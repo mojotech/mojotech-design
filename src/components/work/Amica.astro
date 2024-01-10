@@ -2,7 +2,7 @@
   data-amica
   class="w-full aspect-[53/32] bg-[#00A891] flex justify-center relative"
 >
-  <img class="max-w-[10rem]" src="/images/work/Amica.svg" />
+  <img data-amica-logo class="max-w-[10rem]" src="/images/work/Amica.svg" />
   <img
     data-amica-hover
     class="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
@@ -17,5 +17,9 @@
 
 <script>
   import handleWorkAnimation from "../../lib/workAnimation.ts";
-  handleWorkAnimation("[data-amica]", "[data-amica-hover]");
+  handleWorkAnimation(
+    "[data-amica]",
+    "[data-amica-hover]",
+    "[data-amica-logo]",
+  );
 </script>

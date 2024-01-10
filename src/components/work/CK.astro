@@ -2,7 +2,7 @@
   data-ck
   class="w-full aspect-[25/35] bg-[#BD65DB] flex justify-center relative"
 >
-  <img class="max-w-[12rem]" src="/images/work/CreditKarma.svg" />
+  <img data-ck-logo class="max-w-[12rem]" src="/images/work/CreditKarma.svg" />
   <img
     data-ck-hover
     class="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
@@ -17,5 +17,5 @@
 
 <script>
   import handleWorkAnimation from "../../lib/workAnimation.ts";
-  handleWorkAnimation("[data-ck]", "[data-ck-hover]");
+  handleWorkAnimation("[data-ck]", "[data-ck-hover]", "[data-ck-logo]");
 </script>

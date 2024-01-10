@@ -2,7 +2,7 @@
   data-bu
   class="w-full aspect-square bg-[#F7DDE1] flex justify-center relative"
 >
-  <img class="max-w-[10rem]" src="/images/work/BetterUp.svg" />
+  <img data-bu-logo class="max-w-[10rem]" src="/images/work/BetterUp.svg" />
   <img
     data-bu-hover
     class="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
@@ -17,5 +17,5 @@
 
 <script>
   import handleWorkAnimation from "../../lib/workAnimation.ts";
-  handleWorkAnimation("[data-bu]", "[data-bu-hover]");
+  handleWorkAnimation("[data-bu]", "[data-bu-hover]", "[data-bu-logo]");
 </script>

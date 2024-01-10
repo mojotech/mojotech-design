@@ -2,7 +2,7 @@
   data-ml
   class="w-full aspect-[25/33] bg-[#CFD9ED] flex justify-center relative"
 >
-  <img class="max-w-[11rem]" src="/images/work/MoneyLion.svg" />
+  <img data-ml-logo class="max-w-[11rem]" src="/images/work/MoneyLion.svg" />
   <img
     data-ml-hover
     class="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
@@ -17,5 +17,5 @@
 
 <script>
   import handleWorkAnimation from "../../lib/workAnimation.ts";
-  handleWorkAnimation("[data-ml]", "[data-ml-hover]");
+  handleWorkAnimation("[data-ml]", "[data-ml-hover]", "[data-ml-logo]");
 </script>

@@ -2,7 +2,7 @@
   data-angi
   class="w-full aspect-[53/32] bg-[#003359] flex justify-center relative"
 >
-  <img class="max-w-[8rem]" src="/images/work/Angi.svg" />
+  <img data-angi-logo class="max-w-[8rem]" src="/images/work/Angi.svg" />
   <img
     data-angi-hover
     class="absolute top-0 left-0 opacity-0 w-full h-full object-cover"
@@ -17,5 +17,5 @@
 
 <script>
   import handleWorkAnimation from "../../lib/workAnimation.ts";
-  handleWorkAnimation("[data-angi]", "[data-angi-hover]");
+  handleWorkAnimation("[data-angi]", "[data-angi-hover]", "[data-angi-logo]");
 </script>
