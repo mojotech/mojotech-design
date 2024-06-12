@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Grid from "../components/Grid.astro";
+import MillerKnoll from "../components/work/MillerKnoll.astro";
+import Angi from "../components/work/Angi.astro";
+import CreditKarma from "../components/work/CK.astro";
+import DowJones from "../components/work/Dow.astro";
+import MoneyLion from "../components/work/ML.astro";
+import BetterUp from "../components/work/BetterUp.astro";
+import Amica from "../components/work/Amica.astro";
+
+import Portraits from "../components/Portraits.astro";
+
+const portraits = [
+  { person: "Matt Rossi", src: "/images/portraits/matt.png" },
+  { person: "Jesse Hoyos", src: "/images/portraits/jesse.png" },
+  { person: "Chapman Bettis", src: "/images/portraits/chapman.png" },
+  { person: "Linzi Clary", src: "/images/portraits/linzi.png" },
+  { person: "Katy Griswold", src: "/images/portraits/katy.png" },
+  { person: "Ko Kawazoe", src: "/images/portraits/ko.png" },
+];
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="pt-[200px]">
+    <Grid>
+      <div class="col-start-2 col-span-10 w-full mb-44">
+        <Hero />
+      </div>
+      <div class="col-start-3 col-span-8 mb-44">
+        <h2 class="text-4xl leading-[2.925rem]">
+          Since 2008, we’ve been building serious products for clients like
+          UnderArmour, Shell, and Credit Karma. Our work is driven by what our
+          clients need, not our egos—we’re here to build the right thing, not to
+          be right.
+        </h2>
+      </div>
+      <div class="col-span-full mb-44">
+        <MillerKnoll />
+      </div>
+      <div class="col-start-3 col-span-8 mb-44 pl-3 border-l-2 border-l-white">
+        <blockquote class="text-4xl leading-[2.925rem]">
+          Building a seamless online experience for our B2B clients is a top
+          priority for MillerKnoll, and MojoTech’s expertise in designing
+          marketplaces for this audience made for a strong partnership. The
+          MojoTech team quickly understood our priorities and worked alongside
+          us to build meaningful and quick results on our timetable.
+        </blockquote>
+        <cite>
+          Kristen DeLap<br />
+           Vice President, Digital Product and User Experience at MillerKnoll
+        </cite>
+      </div>
+      <div class="col-span-8 mb-12"><Angi /></div>
+      <div class="col-span-4 mb-12"><CreditKarma /></div>
+      <div class="col-span-4 mb-12"><DowJones /></div>
+      <div class="col-span-4 mb-12"><MoneyLion /></div>
+      <div class="col-span-4"></div>
+      <div class="col-span-4 mb-12"><BetterUp /></div>
+      <div class="col-span-8 mb-44"><Amica /></div>
+      <div class="col-end-11 col-start-3 flex flex-col gap-12 mb-44">
+        <Portraits heading="Meet the team" {portraits} />
+      </div>
+    </Grid>
+  </main>
+</Layout>
