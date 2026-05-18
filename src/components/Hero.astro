@@ -2,37 +2,153 @@
 // JS
 ---
 
-<div class="flex flex-col gap-7">
-  <div class="flex items-end justify-between">
-    <span class="text-[104px] leading-[104px] tracking-[-3.12px]">We are</span>
-    <img src="/images/hero/hero-image-one.svg" />
-    <span class="text-[104px] leading-[104px] tracking-[-3.12px]"
-      >MojoTech’s</span
-    >
-    <img
-      srcset="/images/hero/hero-image-two.jpg 480w, /images/hero/hero-image-two@2x.jpg 800w"
-      sizes="(max-width: 600px) 480px,
-         800px"
-      src="/images/hero/hero-image-two.jpg"
-      class="max-h-[232px]"
-    />
-  </div>
-  <div class="flex items-start gap-6">
-    <img
-      srcset="/images/hero/hero-image-three.jpg 480w, /images/hero/hero-image-three@2x.jpg 800w"
-      sizes="(max-width: 600px) 480px,
-         800px"
-      src="/images/hero/hero-image-three.jpg"
-      class="max-h-[187px]"
-    />
-    <span class="text-[104px] leading-[104px] tracking-[-3.12px]">design</span>
-    <img
-      srcset="/images/hero/hero-image-four.jpg 480w, /images/hero/hero-image-four@2x.jpg 800w"
-      sizes="(max-width: 600px) 480px,
-         800px"
-      src="/images/hero/hero-image-four.jpg"
-      class="max-h-[233px]"
-    />
-    <span class="text-[104px] leading-[104px] tracking-[-3.12px]">team.</span>
+<style>
+  @keyframes spiral-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .hero-root {
+    container-type: inline-size;
+  }
+
+  /* Type and image sizes are all in `em`, driven by this one font-size.
+     The clamp lets the whole composition scale with the container width
+     while never exceeding the Figma reference (104px). */
+  .hero-stack {
+    font-size: clamp(36px, 8.7cqi, 104px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.26em;
+  }
+
+  .hero-row {
+    display: flex;
+    gap: 0.26em;
+    align-items: flex-end;
+  }
+
+  .hero-row-bottom {
+    align-items: flex-start;
+  }
+
+  .hero-word {
+    font-size: 1em;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: font-style 0.2s ease-out;
+    cursor: default;
+  }
+
+  .hero-word:hover {
+    font-style: italic;
+  }
+
+  .hero-spiral {
+    width: 1.49em;
+    height: 1.49em;
+    flex-shrink: 0;
+    animation: spiral-spin 18s linear infinite;
+    transform-origin: center;
+  }
+
+  .hero-spiral:hover {
+    animation-duration: 2s;
+  }
+
+  .hero-slot {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .hero-slot-tr { width: 1.49em; height: 2.23em; }
+  .hero-slot-bl { width: 3.21em; height: 1.81em; }
+
+  .hero-slot img[data-state] {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.45s ease-out;
+  }
+
+  .hero-slot img[data-state].active {
+    opacity: 1;
+  }
+
+  .hero-slot-bm { width: 1.48em; height: 2.25em; }
+
+  .hero-pan {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin: center center;
+    animation: ui-pan 7s ease-in-out infinite alternate;
+  }
+
+  @keyframes ui-pan {
+    from { transform: scale(1.22) translateY(9%); }
+    to   { transform: scale(1.22) translateY(-9%); }
+  }
+</style>
+
+<div class="hero-root">
+  <div class="hero-stack">
+    <div class="hero-row">
+      <span class="hero-word">We are</span>
+      <img src="/images/hero/hero-image-one.svg" class="hero-spiral" alt="" />
+      <span class="hero-word">MojoTech's</span>
+
+      <div class="hero-slot hero-slot-tr">
+        <img src="/images/hero/hero-image-two.jpg" data-state="0" class="active" alt="" />
+        <img src="/images/hero/hero-image-two-s2.jpg" data-state="1" alt="" />
+        <img src="/images/hero/hero-image-two-s3.jpg" data-state="2" alt="" />
+      </div>
+    </div>
+
+    <div class="hero-row hero-row-bottom">
+      <div class="hero-slot hero-slot-bl">
+        <img src="/images/hero/hero-image-three.jpg" data-state="0" class="active" alt="" />
+        <img src="/images/hero/hero-image-three-s2.jpg" data-state="1" alt="" />
+        <img src="/images/hero/hero-image-three-s3.jpg" data-state="2" alt="" />
+      </div>
+
+      <span class="hero-word">design</span>
+
+      <div class="hero-slot hero-slot-bm">
+        <img
+          srcset="/images/hero/hero-image-four.jpg 480w, /images/hero/hero-image-four@2x.jpg 800w"
+          sizes="(max-width: 600px) 480px, 800px"
+          src="/images/hero/hero-image-four.jpg"
+          class="hero-pan"
+          alt=""
+        />
+      </div>
+
+      <span class="hero-word">team.</span>
+    </div>
   </div>
 </div>
+
+<script>
+  const STATES = 3;
+  const INTERVAL_MS = 4000;
+  let current = 0;
+
+  function advance() {
+    current = (current + 1) % STATES;
+    document.querySelectorAll<HTMLImageElement>('.hero-slot img').forEach(img => {
+      const active = parseInt(img.dataset.state ?? '0') === current;
+      img.classList.toggle('active', active);
+    });
+  }
+
+  setInterval(advance, INTERVAL_MS);
+</script>
