@@ -8,6 +8,9 @@
     "build": "next build && next export",
     "next:start": "next start"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
