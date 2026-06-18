@@ -41,8 +41,7 @@ const StaffGrid: React.FC = () => (
         <Image mb={1} src="/img/jpg/clary.jpg" />
         <Text>Linzi Clary</Text>
       </Box>
-      <Link scroll={false} passHref href="/hiring/">
-        <Box as="a" css={{ textDecoration: "none" }}>
+      <Link scroll={false} href="/hiring/" style={{ textDecoration: "none", color: "inherit" }}>
           <RatioBox
             aspectRatio={[400, 400]}
             css={{
@@ -60,7 +59,6 @@ const StaffGrid: React.FC = () => (
               </Text>
             </Text>
           </RatioBox>
-        </Box>
       </Link>
     </AutoGrid>
   </Wrap>

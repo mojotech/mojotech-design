@@ -58,7 +58,7 @@ const Header: React.FC = () => {
               right: 0,
             }}
           >
-            <Link href="/hiring/">
+            <Link href="/hiring/" style={{ textDecoration: "none", color: "inherit" }}>
               <Button paddingX={4} css={{ opacity: pathname === "/" ? 1 : 0 }}>
                 Join the team
               </Button>

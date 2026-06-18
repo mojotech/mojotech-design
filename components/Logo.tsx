@@ -7,14 +7,13 @@ import { Flex } from "@mojotech/mojo-ui";
 
 const Logo: React.FC = () => (
   <Link href="/" scroll={false}>
-    <a>
-      <Flex
-        css={{ cursor: "pointer" }}
-        height={"3.2em"}
-        width={"3.2em"}
-        top={[16, "initial"]}
-        zIndex={7}
-      >
+    <Flex
+      css={{ cursor: "pointer" }}
+      height={"3.2em"}
+      width={"3.2em"}
+      top={[16, "initial"]}
+      zIndex={7}
+    >
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           height="100%"
@@ -34,8 +33,7 @@ const Logo: React.FC = () => (
             />
           </motion.g>
         </motion.svg>
-      </Flex>
-    </a>
+    </Flex>
   </Link>
 );
 

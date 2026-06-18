@@ -40,8 +40,9 @@ const Lifestyle: React.FC = () => (
         <Text marginBottom={0} opacity={0}>
           We are Hiring
         </Text>
-        <Link scroll={false} passHref href="/hiring/">
+        <Link scroll={false} href="/hiring/" style={{ textDecoration: "none", color: "inherit" }}>
           <TextLink
+            as="span"
             textAlign="center"
             scheme="dark"
             fontSize={4}
