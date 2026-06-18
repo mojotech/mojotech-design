@@ -29,11 +29,11 @@
     "@types/facepaint": "^1.2.1",
     "@types/node": "^12.12.14",
     "@types/react": "^17.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.10.0",
-    "@typescript-eslint/parser": "^2.10.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
     "csstype": "^2.6.7",
-    "eslint": "^6.7.2",
+    "eslint": "^8.0.0",
     "eslint-config-healthier": "^3.2.0",
-    "typescript": "^3.7.3"
+    "typescript": "^5.0.0"
   }
 }
