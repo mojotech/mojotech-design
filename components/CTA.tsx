@@ -36,7 +36,7 @@ const Lifestyle: React.FC = () => (
           src="/img/jpg/cta/cta-jobs@2x.jpg"
         />
       </Image>
-      <Flex flexDirection="column" alignItems="center">
+      <Flex flexDirection="column" alignItems="center" css={{ display: "none" }}>
         <Text marginBottom={0} opacity={0}>
           We are Hiring
         </Text>
