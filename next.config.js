@@ -1,4 +1,5 @@
 module.exports = {
+  output: "export",
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.svg$/,
@@ -6,11 +7,5 @@ module.exports = {
     });
 
     return config;
-  },
-  exportPathMap: async function() {
-    return {
-      "/": { page: "/" },
-      "/hiring": { page: "/hiring" },
-    };
   },
 };
