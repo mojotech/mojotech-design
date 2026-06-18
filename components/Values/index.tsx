@@ -37,7 +37,7 @@ const Values: React.FC = () => {
         gridGap={0}
       >
         {valueData.map((v) => (
-          <Value title={v.title} copy={v.copy} />
+          <Value key={v.title} title={v.title} copy={v.copy} />
         ))}
       </AutoGrid>
     </Wrap>

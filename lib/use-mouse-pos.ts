@@ -28,9 +28,10 @@ const useMousePosition: Hook = () => {
   };
 
   React.useEffect(() => {
-    if (ref.current) {
-      ref.current.addEventListener("mouseenter", enter);
-      ref.current.addEventListener("mouseleave", leave);
+    const node = ref.current;
+    if (node) {
+      node.addEventListener("mouseenter", enter);
+      node.addEventListener("mouseleave", leave);
     }
     if (hover) {
       window.addEventListener("mousemove", handleMouseMove);
@@ -40,9 +41,9 @@ const useMousePosition: Hook = () => {
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      if (ref.current) {
-        ref.current.removeEventListener("mouseenter", enter);
-        ref.current.removeEventListener("mouseleave", leave);
+      if (node) {
+        node.removeEventListener("mouseenter", enter);
+        node.removeEventListener("mouseleave", leave);
       }
     };
   });
