@@ -6,7 +6,7 @@ const useMousePosition: Hook = () => {
   const ref = React.useRef<HTMLElement>();
   const [hover, setHover] = React.useState<boolean>(false);
 
-  let [windowMousePosition, setWindowMousePosition] = React.useState({
+  const [windowMousePosition, setWindowMousePosition] = React.useState({
     x: 0,
     y: 0,
   });
