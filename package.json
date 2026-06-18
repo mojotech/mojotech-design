@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "next",
-    "build": "next build && next export",
+    "build": "next build",
     "next:start": "next start"
   },
   "engines": {
@@ -18,17 +18,17 @@
     "emotion-theming": "^10.0.27",
     "facepaint": "^1.2.1",
     "framer-motion": "^1.7.0",
-    "next": "^9.1.7",
+    "next": "^13.5.0",
     "onno-react": "^1.0.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.7.6",
     "@svgr/webpack": "^5.0.1",
     "@types/facepaint": "^1.2.1",
     "@types/node": "^12.12.14",
-    "@types/react": "^16.9.15",
+    "@types/react": "^18.2.0",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "csstype": "^2.6.7",
