@@ -30,10 +30,6 @@ const StaffGrid: React.FC = () => (
         <Text>Chapman Bettis</Text>
       </Box>
       <Box>
-        <Image mb={1} src="/img/jpg/hoyos.jpg" />
-        <Text>Jesse Hoyos</Text>
-      </Box>
-      <Box>
         <Image mb={1} src="/img/jpg/wynn.jpg" />
         <Text>Chris Wynn</Text>
       </Box>
