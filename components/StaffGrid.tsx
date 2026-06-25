@@ -105,6 +105,43 @@ const StaffGrid: React.FC = () => (
             <br />
             <Text as="span" fontSize={3}>
               &#129309;
+      <Box>
+        <Image mb={1} src="/img/jpg/rossi.jpg" />
+        <Text>Matt Rossi</Text>
+      </Box>
+      <Box>
+        <Image mb={1} src="/img/jpg/bettis.jpg" />
+        <Text>Chapman Bettis</Text>
+      </Box>
+      <Box>
+        <Image mb={1} src="/img/jpg/wynn.jpg" />
+        <Text>Chris Wynn</Text>
+      </Box>
+      <Box>
+        <Image mb={1} src="/img/jpg/clary.jpg" />
+        <Text>Linzi Clary</Text>
+      </Box>
+      <Box>
+        <Image mb={1} src="/img/jpg/matuscak.jpg" />
+        <Text>Olesya Matuscak</Text>
+      </Box>
+      <Link scroll={false} href="/hiring/" legacyBehavior>
+        <a style={{ textDecoration: "none", color: "inherit" }}>
+          <RatioBox
+            aspectRatio={[400, 400]}
+            css={{
+              alignItems: "center",
+              backgroundColor: "#2b2836",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Text paddingX={3} textAlign="center" color="mediumGray">
+              If this bothers you, fix it by joining the team.
+              <br />
+              <Text as="span" fontSize={3}>
+                &#129309;
+              </Text>
             </Text>
           </Text>
         </RatioBox>
