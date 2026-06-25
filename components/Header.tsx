@@ -1,10 +1,8 @@
 /** @jsx jsx */
 import * as React from "react";
 import { jsx } from "@emotion/core";
-import Link from "next/link";
-import { Button, GridSystem, Wrap, zStack, Flex } from "@mojotech/mojo-ui";
+import { GridSystem, Wrap, zStack, Flex } from "@mojotech/mojo-ui";
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 
 import { useScrollPos } from "../lib/use-scroll-pos";
 
@@ -29,7 +27,6 @@ const headerVariants = {
 
 const Header: React.FC = () => {
   const scrollPos = useScrollPos();
-  const { pathname } = useRouter();
 
   return (
     <Flex position="fixed" top={[24, "8vh"]} width="100%" zIndex={zStack.toast}>
@@ -49,20 +46,6 @@ const Header: React.FC = () => {
             }}
           >
             <Logo />
-          </motion.div>
-          <motion.div
-            animate={scrollPos === "bottom" ? "bottom" : "top"}
-            variants={headerVariants}
-            css={{
-              position: "absolute",
-              right: 0,
-            }}
-          >
-            <Link href="/hiring/" style={{ textDecoration: "none", color: "inherit" }}>
-              <Button paddingX={4} css={{ opacity: pathname === "/" ? 1 : 0 }}>
-                Join the team
-              </Button>
-            </Link>
           </motion.div>
         </Wrap>
       </GridSystem>
